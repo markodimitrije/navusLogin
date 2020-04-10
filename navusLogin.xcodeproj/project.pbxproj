@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7C5CA91A2440A6C600C4EF3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA9192440A6C600C4EF3F /* AppDelegate.swift */; };
+		7C5CA91C2440A6C600C4EF3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA91B2440A6C600C4EF3F /* SceneDelegate.swift */; };
+		7C5CA91E2440A6C600C4EF3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA91D2440A6C600C4EF3F /* ViewController.swift */; };
+		7C5CA9212440A6C600C4EF3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CA91F2440A6C600C4EF3F /* Main.storyboard */; };
+		7C5CA9232440A6C900C4EF3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CA9222440A6C900C4EF3F /* Assets.xcassets */; };
+		7C5CA9262440A6C900C4EF3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CA9242440A6C900C4EF3F /* LaunchScreen.storyboard */; };
+		7C5CA9312440A6CA00C4EF3F /* navusLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA9302440A6CA00C4EF3F /* navusLoginTests.swift */; };
+		7C5CA93C2440A6CA00C4EF3F /* navusLoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA93B2440A6CA00C4EF3F /* navusLoginUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7C5CA92D2440A6CA00C4EF3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C5CA90E2440A6C600C4EF3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C5CA9152440A6C600C4EF3F;
+			remoteInfo = navusLogin;
+		};
+		7C5CA9382440A6CA00C4EF3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C5CA90E2440A6C600C4EF3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C5CA9152440A6C600C4EF3F;
+			remoteInfo = navusLogin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7C5CA9162440A6C600C4EF3F /* navusLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = navusLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C5CA9192440A6C600C4EF3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7C5CA91B2440A6C600C4EF3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7C5CA91D2440A6C600C4EF3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7C5CA9202440A6C600C4EF3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7C5CA9222440A6C900C4EF3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7C5CA9252440A6C900C4EF3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7C5CA9272440A6C900C4EF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C5CA92C2440A6CA00C4EF3F /* navusLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = navusLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C5CA9302440A6CA00C4EF3F /* navusLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navusLoginTests.swift; sourceTree = "<group>"; };
+		7C5CA9322440A6CA00C4EF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C5CA9372440A6CA00C4EF3F /* navusLoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = navusLoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C5CA93B2440A6CA00C4EF3F /* navusLoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navusLoginUITests.swift; sourceTree = "<group>"; };
+		7C5CA93D2440A6CA00C4EF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7C5CA9132440A6C600C4EF3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C5CA9292440A6CA00C4EF3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C5CA9342440A6CA00C4EF3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7C5CA90D2440A6C600C4EF3F = {
+			isa = PBXGroup;
+			children = (
+				7C5CA9182440A6C600C4EF3F /* navusLogin */,
+				7C5CA92F2440A6CA00C4EF3F /* navusLoginTests */,
+				7C5CA93A2440A6CA00C4EF3F /* navusLoginUITests */,
+				7C5CA9172440A6C600C4EF3F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7C5CA9172440A6C600C4EF3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C5CA9162440A6C600C4EF3F /* navusLogin.app */,
+				7C5CA92C2440A6CA00C4EF3F /* navusLoginTests.xctest */,
+				7C5CA9372440A6CA00C4EF3F /* navusLoginUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7C5CA9182440A6C600C4EF3F /* navusLogin */ = {
+			isa = PBXGroup;
+			children = (
+				7C5CA9192440A6C600C4EF3F /* AppDelegate.swift */,
+				7C5CA91B2440A6C600C4EF3F /* SceneDelegate.swift */,
+				7C5CA91D2440A6C600C4EF3F /* ViewController.swift */,
+				7C5CA91F2440A6C600C4EF3F /* Main.storyboard */,
+				7C5CA9222440A6C900C4EF3F /* Assets.xcassets */,
+				7C5CA9242440A6C900C4EF3F /* LaunchScreen.storyboard */,
+				7C5CA9272440A6C900C4EF3F /* Info.plist */,
+			);
+			path = navusLogin;
+			sourceTree = "<group>";
+		};
+		7C5CA92F2440A6CA00C4EF3F /* navusLoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				7C5CA9302440A6CA00C4EF3F /* navusLoginTests.swift */,
+				7C5CA9322440A6CA00C4EF3F /* Info.plist */,
+			);
+			path = navusLoginTests;
+			sourceTree = "<group>";
+		};
+		7C5CA93A2440A6CA00C4EF3F /* navusLoginUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7C5CA93B2440A6CA00C4EF3F /* navusLoginUITests.swift */,
+				7C5CA93D2440A6CA00C4EF3F /* Info.plist */,
+			);
+			path = navusLoginUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7C5CA9152440A6C600C4EF3F /* navusLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C5CA9402440A6CA00C4EF3F /* Build configuration list for PBXNativeTarget "navusLogin" */;
+			buildPhases = (
+				7C5CA9122440A6C600C4EF3F /* Sources */,
+				7C5CA9132440A6C600C4EF3F /* Frameworks */,
+				7C5CA9142440A6C600C4EF3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = navusLogin;
+			productName = navusLogin;
+			productReference = 7C5CA9162440A6C600C4EF3F /* navusLogin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7C5CA92B2440A6CA00C4EF3F /* navusLoginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C5CA9432440A6CA00C4EF3F /* Build configuration list for PBXNativeTarget "navusLoginTests" */;
+			buildPhases = (
+				7C5CA9282440A6CA00C4EF3F /* Sources */,
+				7C5CA9292440A6CA00C4EF3F /* Frameworks */,
+				7C5CA92A2440A6CA00C4EF3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C5CA92E2440A6CA00C4EF3F /* PBXTargetDependency */,
+			);
+			name = navusLoginTests;
+			productName = navusLoginTests;
+			productReference = 7C5CA92C2440A6CA00C4EF3F /* navusLoginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7C5CA9362440A6CA00C4EF3F /* navusLoginUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C5CA9462440A6CA00C4EF3F /* Build configuration list for PBXNativeTarget "navusLoginUITests" */;
+			buildPhases = (
+				7C5CA9332440A6CA00C4EF3F /* Sources */,
+				7C5CA9342440A6CA00C4EF3F /* Frameworks */,
+				7C5CA9352440A6CA00C4EF3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C5CA9392440A6CA00C4EF3F /* PBXTargetDependency */,
+			);
+			name = navusLoginUITests;
+			productName = navusLoginUITests;
+			productReference = 7C5CA9372440A6CA00C4EF3F /* navusLoginUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7C5CA90E2440A6C600C4EF3F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Marko Dimitrijevic";
+				TargetAttributes = {
+					7C5CA9152440A6C600C4EF3F = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					7C5CA92B2440A6CA00C4EF3F = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 7C5CA9152440A6C600C4EF3F;
+					};
+					7C5CA9362440A6CA00C4EF3F = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 7C5CA9152440A6C600C4EF3F;
+					};
+				};
+			};
+			buildConfigurationList = 7C5CA9112440A6C600C4EF3F /* Build configuration list for PBXProject "navusLogin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7C5CA90D2440A6C600C4EF3F;
+			productRefGroup = 7C5CA9172440A6C600C4EF3F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7C5CA9152440A6C600C4EF3F /* navusLogin */,
+				7C5CA92B2440A6CA00C4EF3F /* navusLoginTests */,
+				7C5CA9362440A6CA00C4EF3F /* navusLoginUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7C5CA9142440A6C600C4EF3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C5CA9262440A6C900C4EF3F /* LaunchScreen.storyboard in Resources */,
+				7C5CA9232440A6C900C4EF3F /* Assets.xcassets in Resources */,
+				7C5CA9212440A6C600C4EF3F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C5CA92A2440A6CA00C4EF3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C5CA9352440A6CA00C4EF3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7C5CA9122440A6C600C4EF3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C5CA91E2440A6C600C4EF3F /* ViewController.swift in Sources */,
+				7C5CA91A2440A6C600C4EF3F /* AppDelegate.swift in Sources */,
+				7C5CA91C2440A6C600C4EF3F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C5CA9282440A6CA00C4EF3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C5CA9312440A6CA00C4EF3F /* navusLoginTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C5CA9332440A6CA00C4EF3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C5CA93C2440A6CA00C4EF3F /* navusLoginUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7C5CA92E2440A6CA00C4EF3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7C5CA9152440A6C600C4EF3F /* navusLogin */;
+			targetProxy = 7C5CA92D2440A6CA00C4EF3F /* PBXContainerItemProxy */;
+		};
+		7C5CA9392440A6CA00C4EF3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7C5CA9152440A6C600C4EF3F /* navusLogin */;
+			targetProxy = 7C5CA9382440A6CA00C4EF3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7C5CA91F2440A6C600C4EF3F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C5CA9202440A6C600C4EF3F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7C5CA9242440A6C900C4EF3F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C5CA9252440A6C900C4EF3F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7C5CA93E2440A6CA00C4EF3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7C5CA93F2440A6CA00C4EF3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7C5CA9412440A6CA00C4EF3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW5669N54T;
+				INFOPLIST_FILE = navusLogin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.navus.navusLogin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7C5CA9422440A6CA00C4EF3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW5669N54T;
+				INFOPLIST_FILE = navusLogin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.navus.navusLogin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7C5CA9442440A6CA00C4EF3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW5669N54T;
+				INFOPLIST_FILE = navusLoginTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.navus.navusLoginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/navusLogin.app/navusLogin";
+			};
+			name = Debug;
+		};
+		7C5CA9452440A6CA00C4EF3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW5669N54T;
+				INFOPLIST_FILE = navusLoginTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.navus.navusLoginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/navusLogin.app/navusLogin";
+			};
+			name = Release;
+		};
+		7C5CA9472440A6CA00C4EF3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW5669N54T;
+				INFOPLIST_FILE = navusLoginUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.navus.navusLoginUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = navusLogin;
+			};
+			name = Debug;
+		};
+		7C5CA9482440A6CA00C4EF3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW5669N54T;
+				INFOPLIST_FILE = navusLoginUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.navus.navusLoginUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = navusLogin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7C5CA9112440A6C600C4EF3F /* Build configuration list for PBXProject "navusLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C5CA93E2440A6CA00C4EF3F /* Debug */,
+				7C5CA93F2440A6CA00C4EF3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C5CA9402440A6CA00C4EF3F /* Build configuration list for PBXNativeTarget "navusLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C5CA9412440A6CA00C4EF3F /* Debug */,
+				7C5CA9422440A6CA00C4EF3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C5CA9432440A6CA00C4EF3F /* Build configuration list for PBXNativeTarget "navusLoginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C5CA9442440A6CA00C4EF3F /* Debug */,
+				7C5CA9452440A6CA00C4EF3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C5CA9462440A6CA00C4EF3F /* Build configuration list for PBXNativeTarget "navusLoginUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C5CA9472440A6CA00C4EF3F /* Debug */,
+				7C5CA9482440A6CA00C4EF3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7C5CA90E2440A6C600C4EF3F /* Project object */;
+}
