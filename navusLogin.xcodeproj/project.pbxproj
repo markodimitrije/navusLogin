@@ -7,14 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42CF0DA272F1E2FE492A6385 /* Pods_navusLoginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E768777E985B17B5FD65E99A /* Pods_navusLoginTests.framework */; };
 		7C5CA91A2440A6C600C4EF3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA9192440A6C600C4EF3F /* AppDelegate.swift */; };
-		7C5CA91C2440A6C600C4EF3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA91B2440A6C600C4EF3F /* SceneDelegate.swift */; };
-		7C5CA91E2440A6C600C4EF3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA91D2440A6C600C4EF3F /* ViewController.swift */; };
+		7C5CA91E2440A6C600C4EF3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA91D2440A6C600C4EF3F /* LoginViewController.swift */; };
 		7C5CA9212440A6C600C4EF3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CA91F2440A6C600C4EF3F /* Main.storyboard */; };
 		7C5CA9232440A6C900C4EF3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CA9222440A6C900C4EF3F /* Assets.xcassets */; };
 		7C5CA9262440A6C900C4EF3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CA9242440A6C900C4EF3F /* LaunchScreen.storyboard */; };
 		7C5CA9312440A6CA00C4EF3F /* navusLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA9302440A6CA00C4EF3F /* navusLoginTests.swift */; };
 		7C5CA93C2440A6CA00C4EF3F /* navusLoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA93B2440A6CA00C4EF3F /* navusLoginUITests.swift */; };
+		7C5CA94D2440AAA400C4EF3F /* LoginViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA94C2440AAA400C4EF3F /* LoginViewControllerFactory.swift */; };
+		7C5CA9502440AAFD00C4EF3F /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA94F2440AAFD00C4EF3F /* Storyboarded.swift */; };
+		7C5CA9522440ABC100C4EF3F /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CA9512440ABC100C4EF3F /* LoginViewController.storyboard */; };
+		7C5CA9552440B46400C4EF3F /* ILoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA9542440B46400C4EF3F /* ILoginViewModel.swift */; };
+		7C5CA9572440B49200C4EF3F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA9562440B49200C4EF3F /* LoginViewModel.swift */; };
+		7C5CA95A2440B71E00C4EF3F /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA9592440B71E00C4EF3F /* ViewModelType.swift */; };
+		7C5CA95C2440B91800C4EF3F /* LoginViewModel+Input+Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA95B2440B91800C4EF3F /* LoginViewModel+Input+Output.swift */; };
+		7C60C77B2441BA3A00F787D4 /* LoginProcessSignalFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60C77A2441BA3A00F787D4 /* LoginProcessSignalFactory.swift */; };
+		7C60C77E2441BA6E00F787D4 /* LoginProcessSignalFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60C77D2441BA6E00F787D4 /* LoginProcessSignalFactoryTest.swift */; };
+		7C7DC67B2440DF3700479A95 /* LoginValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC67A2440DF3700479A95 /* LoginValidator.swift */; };
+		7C7DC67F2440DF7C00479A95 /* AcceptLoginValidatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC67E2440DF7C00479A95 /* AcceptLoginValidatorMock.swift */; };
+		7C7DC6812440DFAB00479A95 /* RejectLoginValidatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC6802440DFAB00479A95 /* RejectLoginValidatorMock.swift */; };
+		7C7DC6882440E04300479A95 /* UserInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC6872440E04300479A95 /* UserInputProtocol.swift */; };
+		7C7DC68A2440E05400479A95 /* UserInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC6892440E05400479A95 /* UserInput.swift */; };
+		7C7DC68D2440E42400479A95 /* ValidInvalidEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC68C2440E42400479A95 /* ValidInvalidEnum.swift */; };
+		7C7DC68F2440E44D00479A95 /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC68E2440E44D00479A95 /* LoginError.swift */; };
+		7C7DC6912440E46C00479A95 /* LoginValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC6902440E46C00479A95 /* LoginValidationError.swift */; };
+		A7303C573D2C4EF39AA1A1A5 /* Pods_navusLoginUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C6573BB76CBCB75DFA0F66 /* Pods_navusLoginUITests.framework */; };
+		E0A47481641091C3F8E538D5 /* Pods_navusLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29CFA7079BAB4ABBE9621DC /* Pods_navusLogin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +54,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C512994089616A9A27E40BA /* Pods-navusLoginUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-navusLoginUITests.debug.xcconfig"; path = "Target Support Files/Pods-navusLoginUITests/Pods-navusLoginUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6C54813BAF68980064F136B3 /* Pods-navusLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-navusLogin.release.xcconfig"; path = "Target Support Files/Pods-navusLogin/Pods-navusLogin.release.xcconfig"; sourceTree = "<group>"; };
 		7C5CA9162440A6C600C4EF3F /* navusLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = navusLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5CA9192440A6C600C4EF3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C5CA91B2440A6C600C4EF3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7C5CA91D2440A6C600C4EF3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7C5CA91D2440A6C600C4EF3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C5CA9202440A6C600C4EF3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C5CA9222440A6C900C4EF3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C5CA9252440A6C900C4EF3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +69,30 @@
 		7C5CA9372440A6CA00C4EF3F /* navusLoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = navusLoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5CA93B2440A6CA00C4EF3F /* navusLoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navusLoginUITests.swift; sourceTree = "<group>"; };
 		7C5CA93D2440A6CA00C4EF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C5CA94C2440AAA400C4EF3F /* LoginViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerFactory.swift; sourceTree = "<group>"; };
+		7C5CA94F2440AAFD00C4EF3F /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		7C5CA9512440ABC100C4EF3F /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		7C5CA9542440B46400C4EF3F /* ILoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoginViewModel.swift; sourceTree = "<group>"; };
+		7C5CA9562440B49200C4EF3F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		7C5CA9592440B71E00C4EF3F /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		7C5CA95B2440B91800C4EF3F /* LoginViewModel+Input+Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Input+Output.swift"; sourceTree = "<group>"; };
+		7C60C77A2441BA3A00F787D4 /* LoginProcessSignalFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProcessSignalFactory.swift; sourceTree = "<group>"; };
+		7C60C77D2441BA6E00F787D4 /* LoginProcessSignalFactoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProcessSignalFactoryTest.swift; sourceTree = "<group>"; };
+		7C7DC67A2440DF3700479A95 /* LoginValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidator.swift; sourceTree = "<group>"; };
+		7C7DC67E2440DF7C00479A95 /* AcceptLoginValidatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptLoginValidatorMock.swift; sourceTree = "<group>"; };
+		7C7DC6802440DFAB00479A95 /* RejectLoginValidatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectLoginValidatorMock.swift; sourceTree = "<group>"; };
+		7C7DC6872440E04300479A95 /* UserInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputProtocol.swift; sourceTree = "<group>"; };
+		7C7DC6892440E05400479A95 /* UserInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInput.swift; sourceTree = "<group>"; };
+		7C7DC68C2440E42400479A95 /* ValidInvalidEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidInvalidEnum.swift; sourceTree = "<group>"; };
+		7C7DC68E2440E44D00479A95 /* LoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
+		7C7DC6902440E46C00479A95 /* LoginValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidationError.swift; sourceTree = "<group>"; };
+		7D46FB024EEC415CD0AC158E /* Pods-navusLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-navusLogin.debug.xcconfig"; path = "Target Support Files/Pods-navusLogin/Pods-navusLogin.debug.xcconfig"; sourceTree = "<group>"; };
+		95B9F6EADE392F944D3A5A62 /* Pods-navusLoginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-navusLoginTests.release.xcconfig"; path = "Target Support Files/Pods-navusLoginTests/Pods-navusLoginTests.release.xcconfig"; sourceTree = "<group>"; };
+		B29CFA7079BAB4ABBE9621DC /* Pods_navusLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_navusLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9C6573BB76CBCB75DFA0F66 /* Pods_navusLoginUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_navusLoginUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E17FA57A7594B50F7E5F6446 /* Pods-navusLoginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-navusLoginTests.debug.xcconfig"; path = "Target Support Files/Pods-navusLoginTests/Pods-navusLoginTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E768777E985B17B5FD65E99A /* Pods_navusLoginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_navusLoginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE70DE51812B9D0BD441E7BB /* Pods-navusLoginUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-navusLoginUITests.release.xcconfig"; path = "Target Support Files/Pods-navusLoginUITests/Pods-navusLoginUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A47481641091C3F8E538D5 /* Pods_navusLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42CF0DA272F1E2FE492A6385 /* Pods_navusLoginTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +116,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7303C573D2C4EF39AA1A1A5 /* Pods_navusLoginUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45E38D27305A5A0698DEC025 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D46FB024EEC415CD0AC158E /* Pods-navusLogin.debug.xcconfig */,
+				6C54813BAF68980064F136B3 /* Pods-navusLogin.release.xcconfig */,
+				E17FA57A7594B50F7E5F6446 /* Pods-navusLoginTests.debug.xcconfig */,
+				95B9F6EADE392F944D3A5A62 /* Pods-navusLoginTests.release.xcconfig */,
+				3C512994089616A9A27E40BA /* Pods-navusLoginUITests.debug.xcconfig */,
+				EE70DE51812B9D0BD441E7BB /* Pods-navusLoginUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7C5CA90D2440A6C600C4EF3F = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +143,8 @@
 				7C5CA92F2440A6CA00C4EF3F /* navusLoginTests */,
 				7C5CA93A2440A6CA00C4EF3F /* navusLoginUITests */,
 				7C5CA9172440A6C600C4EF3F /* Products */,
+				45E38D27305A5A0698DEC025 /* Pods */,
+				A45B54E816295014BCB5B1F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +161,12 @@
 		7C5CA9182440A6C600C4EF3F /* navusLogin */ = {
 			isa = PBXGroup;
 			children = (
-				7C5CA9192440A6C600C4EF3F /* AppDelegate.swift */,
-				7C5CA91B2440A6C600C4EF3F /* SceneDelegate.swift */,
-				7C5CA91D2440A6C600C4EF3F /* ViewController.swift */,
+				7C7DC6852440E03100479A95 /* Model */,
+				7C5CA9492440A74100C4EF3F /* AppDel,assets,launch... */,
+				7C5CA94B2440AA8600C4EF3F /* ViewController */,
+				7C5CA9532440B30E00C4EF3F /* ViewModel */,
+				7C5CA94E2440AAF400C4EF3F /* Utilities */,
 				7C5CA91F2440A6C600C4EF3F /* Main.storyboard */,
-				7C5CA9222440A6C900C4EF3F /* Assets.xcassets */,
-				7C5CA9242440A6C900C4EF3F /* LaunchScreen.storyboard */,
 				7C5CA9272440A6C900C4EF3F /* Info.plist */,
 			);
 			path = navusLogin;
@@ -113,6 +175,8 @@
 		7C5CA92F2440A6CA00C4EF3F /* navusLoginTests */ = {
 			isa = PBXGroup;
 			children = (
+				7C7DC67C2440DF6600479A95 /* Mock */,
+				7C5CA94A2440A9CD00C4EF3F /* LoginViewModelTests */,
 				7C5CA9302440A6CA00C4EF3F /* navusLoginTests.swift */,
 				7C5CA9322440A6CA00C4EF3F /* Info.plist */,
 			);
@@ -128,6 +192,150 @@
 			path = navusLoginUITests;
 			sourceTree = "<group>";
 		};
+		7C5CA9492440A74100C4EF3F /* AppDel,assets,launch... */ = {
+			isa = PBXGroup;
+			children = (
+				7C5CA9192440A6C600C4EF3F /* AppDelegate.swift */,
+				7C5CA9222440A6C900C4EF3F /* Assets.xcassets */,
+				7C5CA9242440A6C900C4EF3F /* LaunchScreen.storyboard */,
+			);
+			path = "AppDel,assets,launch...";
+			sourceTree = "<group>";
+		};
+		7C5CA94A2440A9CD00C4EF3F /* LoginViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				7C60C77C2441BA6000F787D4 /* LoginProcessSignalFactory */,
+			);
+			path = LoginViewModelTests;
+			sourceTree = "<group>";
+		};
+		7C5CA94B2440AA8600C4EF3F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7C5CA91D2440A6C600C4EF3F /* LoginViewController.swift */,
+				7C5CA9512440ABC100C4EF3F /* LoginViewController.storyboard */,
+				7C5CA94C2440AAA400C4EF3F /* LoginViewControllerFactory.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7C5CA94E2440AAF400C4EF3F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7C5CA94F2440AAFD00C4EF3F /* Storyboarded.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7C5CA9532440B30E00C4EF3F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7C5CA9592440B71E00C4EF3F /* ViewModelType.swift */,
+				7C5CA9582440B70E00C4EF3F /* LoginViewModel */,
+				7C7DC6792440DEFD00479A95 /* LoginValidation */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7C5CA9582440B70E00C4EF3F /* LoginViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7C60C7792441BA2300F787D4 /* LoginProcessSignalFactory */,
+				7C5CA9542440B46400C4EF3F /* ILoginViewModel.swift */,
+				7C5CA9562440B49200C4EF3F /* LoginViewModel.swift */,
+				7C5CA95B2440B91800C4EF3F /* LoginViewModel+Input+Output.swift */,
+			);
+			path = LoginViewModel;
+			sourceTree = "<group>";
+		};
+		7C60C7792441BA2300F787D4 /* LoginProcessSignalFactory */ = {
+			isa = PBXGroup;
+			children = (
+				7C60C77A2441BA3A00F787D4 /* LoginProcessSignalFactory.swift */,
+			);
+			path = LoginProcessSignalFactory;
+			sourceTree = "<group>";
+		};
+		7C60C77C2441BA6000F787D4 /* LoginProcessSignalFactory */ = {
+			isa = PBXGroup;
+			children = (
+				7C60C77D2441BA6E00F787D4 /* LoginProcessSignalFactoryTest.swift */,
+			);
+			path = LoginProcessSignalFactory;
+			sourceTree = "<group>";
+		};
+		7C7DC6792440DEFD00479A95 /* LoginValidation */ = {
+			isa = PBXGroup;
+			children = (
+				7C7DC6822440DFCA00479A95 /* Model */,
+				7C7DC67A2440DF3700479A95 /* LoginValidator.swift */,
+			);
+			path = LoginValidation;
+			sourceTree = "<group>";
+		};
+		7C7DC67C2440DF6600479A95 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				7C7DC67D2440DF6D00479A95 /* LoginValidator */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		7C7DC67D2440DF6D00479A95 /* LoginValidator */ = {
+			isa = PBXGroup;
+			children = (
+				7C7DC67E2440DF7C00479A95 /* AcceptLoginValidatorMock.swift */,
+				7C7DC6802440DFAB00479A95 /* RejectLoginValidatorMock.swift */,
+			);
+			path = LoginValidator;
+			sourceTree = "<group>";
+		};
+		7C7DC6822440DFCA00479A95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C7DC68C2440E42400479A95 /* ValidInvalidEnum.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7C7DC6852440E03100479A95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C7DC68B2440E07100479A95 /* LoginError */,
+				7C7DC6862440E03A00479A95 /* UserInput */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7C7DC6862440E03A00479A95 /* UserInput */ = {
+			isa = PBXGroup;
+			children = (
+				7C7DC6872440E04300479A95 /* UserInputProtocol.swift */,
+				7C7DC6892440E05400479A95 /* UserInput.swift */,
+			);
+			path = UserInput;
+			sourceTree = "<group>";
+		};
+		7C7DC68B2440E07100479A95 /* LoginError */ = {
+			isa = PBXGroup;
+			children = (
+				7C7DC68E2440E44D00479A95 /* LoginError.swift */,
+				7C7DC6902440E46C00479A95 /* LoginValidationError.swift */,
+			);
+			path = LoginError;
+			sourceTree = "<group>";
+		};
+		A45B54E816295014BCB5B1F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B29CFA7079BAB4ABBE9621DC /* Pods_navusLogin.framework */,
+				E768777E985B17B5FD65E99A /* Pods_navusLoginTests.framework */,
+				B9C6573BB76CBCB75DFA0F66 /* Pods_navusLoginUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +343,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C5CA9402440A6CA00C4EF3F /* Build configuration list for PBXNativeTarget "navusLogin" */;
 			buildPhases = (
+				BDA351B5FAB3F1BC2847A885 /* [CP] Check Pods Manifest.lock */,
 				7C5CA9122440A6C600C4EF3F /* Sources */,
 				7C5CA9132440A6C600C4EF3F /* Frameworks */,
 				7C5CA9142440A6C600C4EF3F /* Resources */,
+				74A6213D49BA1E97F2748313 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +362,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C5CA9432440A6CA00C4EF3F /* Build configuration list for PBXNativeTarget "navusLoginTests" */;
 			buildPhases = (
+				2E0CA1BC8D86364B5F2BB73A /* [CP] Check Pods Manifest.lock */,
 				7C5CA9282440A6CA00C4EF3F /* Sources */,
 				7C5CA9292440A6CA00C4EF3F /* Frameworks */,
 				7C5CA92A2440A6CA00C4EF3F /* Resources */,
@@ -170,6 +381,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C5CA9462440A6CA00C4EF3F /* Build configuration list for PBXNativeTarget "navusLoginUITests" */;
 			buildPhases = (
+				AF7E747E90D22C9E60230C2F /* [CP] Check Pods Manifest.lock */,
 				7C5CA9332440A6CA00C4EF3F /* Sources */,
 				7C5CA9342440A6CA00C4EF3F /* Frameworks */,
 				7C5CA9352440A6CA00C4EF3F /* Resources */,
@@ -233,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C5CA9262440A6C900C4EF3F /* LaunchScreen.storyboard in Resources */,
+				7C5CA9522440ABC100C4EF3F /* LoginViewController.storyboard in Resources */,
 				7C5CA9232440A6C900C4EF3F /* Assets.xcassets in Resources */,
 				7C5CA9212440A6C600C4EF3F /* Main.storyboard in Resources */,
 			);
@@ -254,14 +467,125 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E0CA1BC8D86364B5F2BB73A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-navusLoginTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74A6213D49BA1E97F2748313 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-navusLogin/Pods-navusLogin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-navusLogin/Pods-navusLogin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF7E747E90D22C9E60230C2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-navusLoginUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDA351B5FAB3F1BC2847A885 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-navusLogin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C5CA9122440A6C600C4EF3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C5CA91E2440A6C600C4EF3F /* ViewController.swift in Sources */,
+				7C5CA95C2440B91800C4EF3F /* LoginViewModel+Input+Output.swift in Sources */,
+				7C7DC68A2440E05400479A95 /* UserInput.swift in Sources */,
+				7C60C77B2441BA3A00F787D4 /* LoginProcessSignalFactory.swift in Sources */,
+				7C7DC68F2440E44D00479A95 /* LoginError.swift in Sources */,
+				7C7DC6882440E04300479A95 /* UserInputProtocol.swift in Sources */,
+				7C5CA9552440B46400C4EF3F /* ILoginViewModel.swift in Sources */,
+				7C5CA94D2440AAA400C4EF3F /* LoginViewControllerFactory.swift in Sources */,
+				7C5CA9572440B49200C4EF3F /* LoginViewModel.swift in Sources */,
+				7C5CA91E2440A6C600C4EF3F /* LoginViewController.swift in Sources */,
 				7C5CA91A2440A6C600C4EF3F /* AppDelegate.swift in Sources */,
-				7C5CA91C2440A6C600C4EF3F /* SceneDelegate.swift in Sources */,
+				7C7DC67B2440DF3700479A95 /* LoginValidator.swift in Sources */,
+				7C5CA9502440AAFD00C4EF3F /* Storyboarded.swift in Sources */,
+				7C7DC6912440E46C00479A95 /* LoginValidationError.swift in Sources */,
+				7C5CA95A2440B71E00C4EF3F /* ViewModelType.swift in Sources */,
+				7C7DC68D2440E42400479A95 /* ValidInvalidEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +593,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C60C77E2441BA6E00F787D4 /* LoginProcessSignalFactoryTest.swift in Sources */,
+				7C7DC6812440DFAB00479A95 /* RejectLoginValidatorMock.swift in Sources */,
+				7C7DC67F2440DF7C00479A95 /* AcceptLoginValidatorMock.swift in Sources */,
 				7C5CA9312440A6CA00C4EF3F /* navusLoginTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,11 +759,13 @@
 		};
 		7C5CA9412440A6CA00C4EF3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D46FB024EEC415CD0AC158E /* Pods-navusLogin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FW5669N54T;
+				DEVELOPMENT_TEAM = UJZMY6T4V6;
 				INFOPLIST_FILE = navusLogin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,11 +779,13 @@
 		};
 		7C5CA9422440A6CA00C4EF3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C54813BAF68980064F136B3 /* Pods-navusLogin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FW5669N54T;
+				DEVELOPMENT_TEAM = UJZMY6T4V6;
 				INFOPLIST_FILE = navusLogin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,6 +799,7 @@
 		};
 		7C5CA9442440A6CA00C4EF3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E17FA57A7594B50F7E5F6446 /* Pods-navusLoginTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +822,7 @@
 		};
 		7C5CA9452440A6CA00C4EF3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95B9F6EADE392F944D3A5A62 /* Pods-navusLoginTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +845,7 @@
 		};
 		7C5CA9472440A6CA00C4EF3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C512994089616A9A27E40BA /* Pods-navusLoginUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +866,7 @@
 		};
 		7C5CA9482440A6CA00C4EF3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE70DE51812B9D0BD441E7BB /* Pods-navusLoginUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
