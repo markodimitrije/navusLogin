@@ -13,6 +13,6 @@ extension LoginViewModel: ViewModelType {
         var userCredentials: Observable<UserInputProtocol>
     }
     struct Output {
-        var processLogin: Observable<Void>
+        var processLogin: Observable<Bool>
     }
 }

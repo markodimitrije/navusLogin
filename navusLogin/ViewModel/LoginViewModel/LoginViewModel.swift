@@ -16,7 +16,7 @@ class LoginViewModel: ILoginViewModel {
     }
     
     func transform(input: Input) -> Output {
-        let loginProcessSignalFactory = LoginProcessSignalFactory(validator: self.validator)
+        let loginProcessSignalFactory = LoginValidationSignalFactory(validator: self.validator)
         let userInputValidationSignal = input.userCredentials.flatMap(loginProcessSignalFactory.map(userInput:))
   
         let loginProcess = userInputValidationSignal

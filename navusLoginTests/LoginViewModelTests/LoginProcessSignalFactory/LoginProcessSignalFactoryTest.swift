@@ -8,26 +8,38 @@
 
 import XCTest
 import RxSwift
+import RxTest
+import RxBlocking
 
 @testable import navusLogin
 
-class UserInputMock: UserInputProtocol {
-    var email = ""
-    var password = ""
-}
-
 class LoginProcessSignalFactoryTest: XCTestCase {
     
-    let userInputMock = UserInputMock()
-    //let rejectValidator = RejectLoginValidatorMock()
+    let userInputMock = EmptyUserInputMock()
     
     func testLoginProcessSignalFactory_ShouldCreate_ExpectedSignalFor_AcceptValidator() {
         //arrange
         let acceptValidator = AcceptLoginValidatorMock()
-        var testSubject = LoginProcessSignalFactory(validator: acceptValidator)
+        let testSubject = LoginValidationSignalFactory(validator: acceptValidator)
         //act
         let signal = testSubject.map(userInput: userInputMock)
         //assert
-        XCTAssertEqual(1, try? signal.toBlocking().f)
+        let trueEvent = try! signal.toBlocking().toArray().first!
+        XCTAssertTrue(trueEvent)
+    }
+    
+    func testLoginProcessSignalFactory_ShouldCreate_ExpectedSignalFor_RejectValidator() {
+        //arrange
+        let rejectValidator = RejectLoginValidatorMock()
+        let testSubject = LoginValidationSignalFactory(validator: rejectValidator)
+        //act+assert
+        do {
+            let signal = testSubject.map(userInput: userInputMock)
+            let _ = try signal.toBlocking().first()!
+        } catch is LoginValidationError {
+            XCTAssertTrue(true)
+        } catch {
+            XCTAssertTrue(false)
+        }
     }
 }
