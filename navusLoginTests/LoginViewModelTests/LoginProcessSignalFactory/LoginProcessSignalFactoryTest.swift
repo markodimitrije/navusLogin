@@ -6,9 +6,9 @@
 //  Copyright © 2020 Marko Dimitrijevic. All rights reserved.
 //
 
-import Foundation
 import XCTest
 import RxSwift
+
 @testable import navusLogin
 
 class UserInputMock: UserInputProtocol {
@@ -28,6 +28,6 @@ class LoginProcessSignalFactoryTest: XCTestCase {
         //act
         let signal = testSubject.map(userInput: userInputMock)
         //assert
-        signal.toB
+        XCTAssertEqual(1, try? signal.toBlocking().f)
     }
 }

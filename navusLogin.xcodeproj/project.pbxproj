@@ -366,6 +366,7 @@
 				7C5CA9282440A6CA00C4EF3F /* Sources */,
 				7C5CA9292440A6CA00C4EF3F /* Frameworks */,
 				7C5CA92A2440A6CA00C4EF3F /* Resources */,
+				7FFADA633FCA73D52A9ED35C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -518,6 +519,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-navusLogin/Pods-navusLogin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FFADA633FCA73D52A9ED35C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-navusLoginTests/Pods-navusLoginTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-navusLoginTests/Pods-navusLoginTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AF7E747E90D22C9E60230C2F /* [CP] Check Pods Manifest.lock */ = {
@@ -801,7 +828,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E17FA57A7594B50F7E5F6446 /* Pods-navusLoginTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FW5669N54T;
@@ -824,7 +851,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 95B9F6EADE392F944D3A5A62 /* Pods-navusLoginTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FW5669N54T;
@@ -847,7 +874,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3C512994089616A9A27E40BA /* Pods-navusLoginUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FW5669N54T;
 				INFOPLIST_FILE = navusLoginUITests/Info.plist;
@@ -868,7 +895,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EE70DE51812B9D0BD441E7BB /* Pods-navusLoginUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FW5669N54T;
 				INFOPLIST_FILE = navusLoginUITests/Info.plist;

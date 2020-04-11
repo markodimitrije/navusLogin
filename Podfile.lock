@@ -1,34 +1,44 @@
 PODS:
   - ReachabilitySwift (4.0.0)
+  - RxBlocking (5.1.1):
+    - RxSwift (~> 5)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - RxTest (5.1.1):
+    - RxSwift (~> 5)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - ReachabilitySwift (~> 4.0.0)
+  - RxBlocking (~> 5.0)
   - RxCocoa
   - RxSwift
+  - RxTest (~> 5.0)
   - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ReachabilitySwift
+    - RxBlocking
     - RxCocoa
     - RxRelay
     - RxSwift
+    - RxTest
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   ReachabilitySwift: e67b2cab4d5386053673d8a7421b5981e5f08259
+  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 432abfb627a61768c4339080615a3f7dc51b031f
+PODFILE CHECKSUM: 4f56babd5ffed224085c300924d6e2352366a998
 
 COCOAPODS: 1.6.1
