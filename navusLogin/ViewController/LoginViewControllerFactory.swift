@@ -20,7 +20,8 @@ class LoginViewControllerFactory {
 class LoginViewModelFactory {
     static func make() -> ILoginViewModel {
         let validator = LoginValidator(validators: [EmailFieldValidator(), PassFieldValidator()])
-        return LoginViewModel(validator: validator)
+        let remoteApi = LoginRemoteApiFactory.make()
+        return LoginViewModel(validator: validator, loginRemoteApi: remoteApi)
     }
 }
 

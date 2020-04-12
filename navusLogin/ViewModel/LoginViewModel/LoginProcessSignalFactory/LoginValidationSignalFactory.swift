@@ -15,11 +15,12 @@ class LoginValidationSignalFactory {
         self.validator = validator
     }
     
-    func map(userInput: UserInputProtocol) -> Observable<Bool> {
+    func map(userInput: ILoginCredentials) -> Observable<Bool> {
         return Observable.create { (observer) -> Disposable in
             switch self.validator.validate(userInput: userInput) {
                 case .valid:
                     observer.onNext(true)
+                    observer.onCompleted()
                 case .invalid(let error):
                     observer.onError(error)
             }

@@ -10,7 +10,7 @@ import Foundation
 @testable import navusLogin
 
 class RejectLoginValidatorMock: ILoginValidator {
-    func validate(userInput: UserInputProtocol) -> ValidInvalidEnum {
+    func validate(userInput: ILoginCredentials) -> ValidInvalidEnum {
         return .invalid(LoginValidationError.fieldIsEmpty)
     }
 }

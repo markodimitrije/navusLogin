@@ -7,8 +7,9 @@
 //
 
 import Foundation
+@testable import navusLogin
 
-class EmptyUserInputMock: UserInputProtocol {
+class EmptyUserInputMock: ILoginCredentials {
     var email = ""
     var password = ""
 }

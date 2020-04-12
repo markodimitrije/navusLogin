@@ -10,7 +10,7 @@ import RxSwift
 
 extension LoginViewModel: ViewModelType {
     struct Input {
-        var userCredentials: Observable<UserInputProtocol>
+        var userCredentials: Observable<ILoginCredentials>
     }
     struct Output {
         var processLogin: Observable<Bool>

@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ILoginValidator {
-    func validate(userInput: UserInputProtocol) -> ValidInvalidEnum
+    func validate(userInput: ILoginCredentials) -> ValidInvalidEnum
 }
 
 struct LoginValidator {
@@ -20,7 +20,7 @@ struct LoginValidator {
 }
 
 extension LoginValidator: ILoginValidator {
-    func validate(userInput: UserInputProtocol) -> ValidInvalidEnum {
+    func validate(userInput: ILoginCredentials) -> ValidInvalidEnum {
         return .valid // TODO marko: implement me
     }
 }

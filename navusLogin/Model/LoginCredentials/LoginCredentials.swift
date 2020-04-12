@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct UserInput {
+struct LoginCredentials: ILoginCredentials {
     var email = ""
     var password = ""
 }
