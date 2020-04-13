@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  navusLogin
+
+  Created by Marko Dimitrijevic on 13/04/2020.
+  Copyright © 2020 Marko Dimitrijevic. All rights reserved.
+*/
+
+"noConnection.title" = "No connetion";
+"noConnection.text" = "Can't connect to internet. Check your connection";
+
+"unknownUser.title" = "Authentication error";
+"unknownUser.text" = "Unknown user. Check your email and password";
+
+"emailNotValid.title" = "Validation error";
+"emailNotValid.text" = "Email not valid. Type in correct email";
+
+"passNotValid.title" = "Validation error";
+"passNotValid.text" = "Password not valid. Password must be at least 6 characters long";
+
+"fieldIsEmpty.title" = "Validation error";
+"fieldIsEmpty.text" = "Field can't be left empty";
