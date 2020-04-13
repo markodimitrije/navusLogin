@@ -8,7 +8,17 @@
 
 import Foundation
 
-protocol ILoginCredentials {
+protocol DictionaryRepresentable {
+    func getDictionary() -> [String: String]
+}
+
+protocol ILoginCredentials: DictionaryRepresentable {
     var email: String { get }
     var password: String { get }
+}
+
+extension ILoginCredentials {
+    func getDictionary() -> [String : String] {
+        return ["email": email, "password": password]
+    }
 }

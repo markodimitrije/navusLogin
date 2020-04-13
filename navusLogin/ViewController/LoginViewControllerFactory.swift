@@ -19,20 +19,7 @@ class LoginViewControllerFactory {
 
 class LoginViewModelFactory {
     static func make() -> ILoginViewModel {
-        let validator = LoginValidator(validators: [EmailFieldValidator(), PassFieldValidator()])
-        let remoteApi = LoginRemoteApiFactory.make()
-        return LoginViewModel(validator: validator, loginRemoteApi: remoteApi)
-    }
-}
-
-class EmailFieldValidator: IFieldValidator {
-    func isValid(text: String) -> ValidInvalidEnum {
-        return ValidInvalidEnum.valid // TODO marko implement me
-    }
-}
-
-class PassFieldValidator: IFieldValidator {
-    func isValid(text: String) -> ValidInvalidEnum {
-        return ValidInvalidEnum.valid // TODO marko implement me
+        return LoginViewModel(validator: LoginValidatorFactory.make(),
+                              loginRemoteApi: LoginRemoteApiFactory.make())
     }
 }

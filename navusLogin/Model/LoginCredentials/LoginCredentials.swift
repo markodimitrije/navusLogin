@@ -11,4 +11,7 @@ import Foundation
 struct LoginCredentials: ILoginCredentials {
     var email = ""
     var password = ""
+    func getDictionary() -> [String: String] {
+        return ["email": email, "password": password]
+    }
 }
