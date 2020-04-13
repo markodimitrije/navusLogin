@@ -12,3 +12,9 @@ enum LoginError: Error {
     case noConnection
     case unknownUser
 }
+
+extension LoginError: MyError {
+    func getHash() -> String {
+        return self.localizedDescription
+    }
+}

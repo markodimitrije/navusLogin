@@ -13,3 +13,9 @@ enum LoginValidationError: Error {
     case emailNotValid
     case passNotValid
 }
+
+extension LoginValidationError: MyError {
+    func getHash() -> String {
+        return self.localizedDescription
+    }
+}
