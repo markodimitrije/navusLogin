@@ -14,7 +14,7 @@ class LoginViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.showAlert()
     }
     
     private func enableUI(with enable: Bool) {
@@ -22,7 +22,8 @@ class LoginViewController: UIViewController, Storyboarded {
     }
     
     private func showAlert() {
-        // TODO alert
+        let alertVC = ErrorAlertControllerFactory.make(error: LoginError.unknownUser)
+        UIViewController.topViewController().present(alertVC, animated: true)
     }
 
 }

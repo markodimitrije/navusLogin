@@ -11,8 +11,10 @@ import UIKit
 class ErrorAlertControllerFactory {
     static func make(error: Error) -> UIAlertController {
         let alertInfo = AlertInfoFactory.make(error: error)
-        return UIAlertController(title: alertInfo.title,
-                                 message: alertInfo.text,
-                                 preferredStyle: .alert)
+        let alertVC = UIAlertController(title: alertInfo.title, message: alertInfo.text, preferredStyle: .alert)
+        let okTitle = NSLocalizedString("ok", comment: "")
+        let okAction = UIAlertAction(title: okTitle, style: .default)
+        alertVC.addAction(okAction)
+        return alertVC
     }
 }

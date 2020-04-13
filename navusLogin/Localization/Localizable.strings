@@ -1,10 +1,12 @@
 /* 
-  Localization.strings
+  Localizable.strings
   navusLogin
 
   Created by Marko Dimitrijevic on 13/04/2020.
   Copyright © 2020 Marko Dimitrijevic. All rights reserved.
 */
+
+"ok" = "OK";
 
 "noConnection.title" = "No connetion";
 "noConnection.text" = "Can't connect to internet. Check your connection";
