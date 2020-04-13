@@ -36,6 +36,7 @@
 		7C5B3CA82444B4E90078111E /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B3CA72444B4E90078111E /* MyError.swift */; };
 		7C5B3CAB2444B52A0078111E /* AlertInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B3CAA2444B52A0078111E /* AlertInfo.swift */; };
 		7C5B3CAE2444BB850078111E /* GlobalFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B3CAD2444BB850078111E /* GlobalFuncs.swift */; };
+		7C5B3CB12444BE810078111E /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C5B3CB02444BE810078111E /* Localization.strings */; };
 		7C5CA91A2440A6C600C4EF3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA9192440A6C600C4EF3F /* AppDelegate.swift */; };
 		7C5CA91E2440A6C600C4EF3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA91D2440A6C600C4EF3F /* LoginViewController.swift */; };
 		7C5CA9212440A6C600C4EF3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CA91F2440A6C600C4EF3F /* Main.storyboard */; };
@@ -113,6 +114,7 @@
 		7C5B3CA72444B4E90078111E /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
 		7C5B3CAA2444B52A0078111E /* AlertInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertInfo.swift; sourceTree = "<group>"; };
 		7C5B3CAD2444BB850078111E /* GlobalFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFuncs.swift; sourceTree = "<group>"; };
+		7C5B3CB02444BE810078111E /* Localization.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localization.strings; sourceTree = "<group>"; };
 		7C5CA9162440A6C600C4EF3F /* navusLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = navusLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5CA9192440A6C600C4EF3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C5CA91D2440A6C600C4EF3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -326,6 +328,14 @@
 			path = GlobalFuncs;
 			sourceTree = "<group>";
 		};
+		7C5B3CAF2444BE6C0078111E /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				7C5B3CB02444BE810078111E /* Localization.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		7C5CA90D2440A6C600C4EF3F = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +361,7 @@
 		7C5CA9182440A6C600C4EF3F /* navusLogin */ = {
 			isa = PBXGroup;
 			children = (
+				7C5B3CAF2444BE6C0078111E /* Localization */,
 				7C5B3CAC2444BB720078111E /* GlobalFuncs */,
 				7C5B3CA42444B4A00078111E /* Data */,
 				7C5B3C9B2444AEE70078111E /* Alert */,
@@ -662,6 +673,7 @@
 			files = (
 				7C5CA9262440A6C900C4EF3F /* LaunchScreen.storyboard in Resources */,
 				7C5CA9522440ABC100C4EF3F /* LoginViewController.storyboard in Resources */,
+				7C5B3CB12444BE810078111E /* Localization.strings in Resources */,
 				7C5CA9232440A6C900C4EF3F /* Assets.xcassets in Resources */,
 				7C5CA9212440A6C600C4EF3F /* Main.storyboard in Resources */,
 			);
