@@ -20,9 +20,9 @@ class LoginProcessSignalFactoryTest: XCTestCase {
     func testLoginValidationSignal_ShouldEmit_OnCompleteFor_AcceptValidator() {
         //arrange
         let acceptValidator = AcceptLoginValidatorMock()
-        let testSubject = LoginValidationSignalFactory(validator: acceptValidator)
+        let sut = LoginValidationSignalFactory(validator: acceptValidator)
         //act
-        let signal = testSubject.map(userInput: userInputMock)
+        let signal = sut.map(userInput: userInputMock)
         //assert
         do {
             let _ = try signal.toBlocking().toArray()
@@ -35,10 +35,10 @@ class LoginProcessSignalFactoryTest: XCTestCase {
     func testLoginValidationSignal_ShouldEmit_ErrorFor_RejectValidator() {
         //arrange
         let rejectValidator = RejectLoginValidatorMock()
-        let testSubject = LoginValidationSignalFactory(validator: rejectValidator)
+        let sut = LoginValidationSignalFactory(validator: rejectValidator)
         //act+assert
         do {
-            let signal = testSubject.map(userInput: userInputMock)
+            let signal = sut.map(userInput: userInputMock)
             let _ = try signal.toBlocking().first()!
         } catch is LoginValidationError {
             XCTAssertTrue(true)

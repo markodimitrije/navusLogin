@@ -15,9 +15,9 @@ class LoginRemoteSignalFactoryTest: XCTestCase {
     func testLoginRemoteSignalFactory_ShouldEmitCompleted_ForSuccessfullLogin() {
         //arrange
         let mockSuccessApi = LoginRemoteApiSuccessMock()
-        let testSubject = LoginRemoteSignalFactory(loginRemoteApi: mockSuccessApi)
+        let sut = LoginRemoteSignalFactory(loginRemoteApi: mockSuccessApi)
         //act
-        let signal = testSubject.map(userInput: EmptyUserInputMock())
+        let signal = sut.map(userInput: EmptyUserInputMock())
         //assert
         do {
             let _ = try signal.toBlocking().toArray() // onCompleted
@@ -31,9 +31,9 @@ class LoginRemoteSignalFactoryTest: XCTestCase {
     func testLoginRemoteSignalFactory_ShouldEmitError_ForErrorLogin() {
         //arrange
         let mockErrorApi = LoginRemoteApiErrorMock()
-        let testSubject = LoginRemoteSignalFactory(loginRemoteApi: mockErrorApi)
+        let sut = LoginRemoteSignalFactory(loginRemoteApi: mockErrorApi)
         //act
-        let signal = testSubject.map(userInput: EmptyUserInputMock())
+        let signal = sut.map(userInput: EmptyUserInputMock())
         //assert
         do {
             let _ = try signal.toBlocking().first()

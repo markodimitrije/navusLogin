@@ -21,10 +21,10 @@ class LoginValidationTest: XCTestCase {
     func testLoginValidation_ShouldThrowError_ForInvalidEmail() {
         //arrange
         let userInput = InvalidPassUserInputMock()
-        let testSubject = LoginValidator(validators: ["email": emailRejectValidator,
-                                                      "password": passAcceptValidator])
+        let sut = LoginValidator(validators: ["email": emailRejectValidator,
+                                              "password": passAcceptValidator])
         //act
-        let result = testSubject.validate(userInput: userInput)
+        let result = sut.validate(userInput: userInput)
         let expectedErrDesc = LoginValidationError.emailNotValid.localizedDescription
         //assert
         switch result {
@@ -36,10 +36,10 @@ class LoginValidationTest: XCTestCase {
     
     func testLoginValidation_ShouldThrowError_ForInvalidPass() {
         //arrange
-        let testSubject = LoginValidator(validators: ["email": emailAcceptValidator,
-                                                      "password": passRejectValidator])
+        let sut = LoginValidator(validators: ["email": emailAcceptValidator,
+                                              "password": passRejectValidator])
         //act
-        let result = testSubject.validate(userInput: userInput)
+        let result = sut.validate(userInput: userInput)
         let expectedErrDesc = LoginValidationError.passNotValid.localizedDescription
         //assert
         switch result {
@@ -51,10 +51,10 @@ class LoginValidationTest: XCTestCase {
     
     func testLoginValidation_ShouldSucceed_ForValid_EmailAndPassword() {
         //arrange
-        let testSubject = LoginValidator(validators: ["email": emailAcceptValidator,
-                                                      "password": passAcceptValidator])
+        let sut = LoginValidator(validators: ["email": emailAcceptValidator,
+                                              "password": passAcceptValidator])
         //act
-        let result = testSubject.validate(userInput: userInput)
+        let result = sut.validate(userInput: userInput)
         //assert
         XCTAssertEqual(ValidationEnum.valid, result)
     }

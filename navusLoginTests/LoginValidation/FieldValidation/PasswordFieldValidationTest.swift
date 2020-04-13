@@ -11,11 +11,11 @@ import XCTest
 
 class PasswordFieldValidationTest: XCTestCase {
     
-    let testSubject = PassFieldValidator()
+    let sut = PassFieldValidator()
     
     func testValidation_ShouldThrowError_IfPasswordNotLongerThanSixChars() {
         let expectedErrDesc = LoginValidationError.passNotValid.localizedDescription
-        let result = testSubject.isValid(text: "123")
+        let result = sut.isValid(text: "123")
         switch result {
         case .invalid(let err):
             XCTAssertEqual(expectedErrDesc, err.localizedDescription)
@@ -25,7 +25,7 @@ class PasswordFieldValidationTest: XCTestCase {
     }
     
     func testValidation_ShouldReturnValid_IfPasswordEqualOrLongerThanSixChars() {
-        let result = testSubject.isValid(text: "123456")
+        let result = sut.isValid(text: "123456")
         XCTAssertEqual(ValidationEnum.valid, result)
     }
 }

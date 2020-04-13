@@ -32,9 +32,9 @@
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7C5CA92B2440A6CA00C4EF3F"
-            BuildableName = "navusLoginTests.xctest"
-            BlueprintName = "navusLoginTests"
+            BlueprintIdentifier = "7C5CA9152440A6C600C4EF3F"
+            BuildableName = "navusLogin.app"
+            BlueprintName = "navusLogin"
             ReferencedContainer = "container:navusLogin.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
