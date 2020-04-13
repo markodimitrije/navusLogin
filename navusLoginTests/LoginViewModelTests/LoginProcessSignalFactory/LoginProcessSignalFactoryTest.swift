@@ -17,18 +17,22 @@ class LoginProcessSignalFactoryTest: XCTestCase {
     
     let userInputMock = EmptyUserInputMock()
     
-    func testLoginProcessSignalFactory_ShouldCreate_ExpectedSignalFor_AcceptValidator() {
+    func testLoginValidationSignal_ShouldEmit_OnCompleteFor_AcceptValidator() {
         //arrange
         let acceptValidator = AcceptLoginValidatorMock()
         let testSubject = LoginValidationSignalFactory(validator: acceptValidator)
         //act
         let signal = testSubject.map(userInput: userInputMock)
         //assert
-        let trueEvent = try! signal.toBlocking().toArray().first!
-        XCTAssertTrue(trueEvent)
+        do {
+            let _ = try signal.toBlocking().toArray()
+            XCTAssertTrue(true)
+        } catch {
+            XCTAssertTrue(false)
+        }
     }
     
-    func testLoginProcessSignalFactory_ShouldCreate_ExpectedSignalFor_RejectValidator() {
+    func testLoginValidationSignal_ShouldEmit_ErrorFor_RejectValidator() {
         //arrange
         let rejectValidator = RejectLoginValidatorMock()
         let testSubject = LoginValidationSignalFactory(validator: rejectValidator)

@@ -12,15 +12,20 @@ import RxSwift
 
 class LoginRemoteSignalFactoryTest: XCTestCase {
     
-    func testLoginRemoteSignalFactory_ShouldEmitTrue_ForSuccessfullLogin() {
+    func testLoginRemoteSignalFactory_ShouldEmitCompleted_ForSuccessfullLogin() {
         //arrange
         let mockSuccessApi = LoginRemoteApiSuccessMock()
         let testSubject = LoginRemoteSignalFactory(loginRemoteApi: mockSuccessApi)
         //act
         let signal = testSubject.map(userInput: EmptyUserInputMock())
         //assert
-        let event = try! signal.toBlocking().first()!
-        XCTAssertEqual(true, event)
+        do {
+            let _ = try signal.toBlocking().toArray() // onCompleted
+            XCTAssertTrue(true)
+        } catch {
+            XCTAssertTrue(false)
+        }
+        
     }
     
     func testLoginRemoteSignalFactory_ShouldEmitError_ForErrorLogin() {
@@ -31,7 +36,7 @@ class LoginRemoteSignalFactoryTest: XCTestCase {
         let signal = testSubject.map(userInput: EmptyUserInputMock())
         //assert
         do {
-            let _ = try signal.toBlocking().first()!
+            let _ = try signal.toBlocking().first()
         } catch {
             XCTAssertTrue(error is LoginError)
         }

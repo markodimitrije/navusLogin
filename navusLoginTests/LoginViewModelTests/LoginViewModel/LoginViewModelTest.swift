@@ -20,7 +20,7 @@ class LoginViewModelTest: XCTestCase {
         let input = LoginViewModel.Input(userCredentials: userInputObs)
         let output = testSubject.transform(input: input)
         do {
-            _ = try output.processLogin.toBlocking().first()
+            _ = try output.loginValidation.toBlocking().first()
         } catch {
             XCTAssertTrue(error is LoginValidationError)
         }
@@ -32,14 +32,20 @@ class LoginViewModelTest: XCTestCase {
         let input = LoginViewModel.Input(userCredentials: userInputObs)
         let output = testSubject.transform(input: input)
         //assert 1
-        let successValidation = try! output.processLogin.toBlocking().first()!
-        XCTAssertTrue(successValidation)
+        do {
+            let _ = try output.loginValidation.toBlocking().toArray() // onCompleted
+            XCTAssertTrue(true)
+        } catch {
+            XCTAssertTrue(false)
+        }
         //assert 2
         do {
-            let _ = try output.processLogin.toBlocking().last()!
+            let _ = try output.loginRemote.toBlocking().toArray() // onCompleted
+            XCTAssertTrue(false)
         } catch {
             XCTAssertTrue(error is LoginError)
         }
+    
     }
     
     func testOutput_ShouldEmit_True_And_Complete_ForSuccessValidation_AndSuccessLogin() throws {
@@ -47,8 +53,8 @@ class LoginViewModelTest: XCTestCase {
                                          loginRemoteApi: LoginRemoteApiSuccessMock())
         let input = LoginViewModel.Input(userCredentials: userInputObs)
         let output = testSubject.transform(input: input)
-        // nextEvents (1 + 1): (successValidation + successRemoteLogin) [+completed]
-        let nextEvents = try output.processLogin.toBlocking().toArray()
-        XCTAssertTrue(nextEvents.count == 2)
+        let _ = try output.loginValidation.toBlocking().toArray()
+        let _ = try output.loginRemote.toBlocking().toArray()
+        XCTAssertTrue(true) // both previous were completed
     }
 }
