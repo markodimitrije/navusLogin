@@ -25,8 +25,6 @@ class LoginViewModel: ILoginViewModel {
         let remoteSignalFactory = LoginRemoteSignalFactory(loginRemoteApi: self.loginRemoteApi)
         let loginRemoteSignal = input.userCredentials.flatMap(remoteSignalFactory.map(userInput:))
   
-        //let loginProcess = Observable.merge([loginValidationSignal, loginRemoteSignal])
-        
         return Output(loginValidation: loginValidationSignal, loginRemote: loginRemoteSignal)
     }
     

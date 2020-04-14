@@ -36,15 +36,16 @@ class LoginViewController: UIViewController, Storyboarded {
         let input = LoginViewModelInputFactory.make(emailField: emailTxtField,
                                                     passField: passTxtField,
                                                     btn: logBtn)
+        
         let output = viewModel.transform(input: input)
         
         output.loginValidation
-            .subscribe(onError: self.showAlert,
-                       onCompleted: self.enableUI)// hard-coded
+            .subscribe(onError: self.errorCatched,
+                       onCompleted: self.disableUI)
             .disposed(by: bag)
         
         output.loginRemote
-            .subscribe(onError: self.showAlert,
+            .subscribe(onError: self.errorCatched,
                        onCompleted: {self.enableUI(); self.navigateToNext()})
             .disposed(by: bag)
     }
@@ -69,7 +70,8 @@ class LoginViewController: UIViewController, Storyboarded {
             activeIndicator.stopAnimating()
     }
     
-    private func showAlert(error: Error) {
+    private func errorCatched(error: Error) {
+        bindToAndFromViewModel()
         enableUI()
         alertErrPresenter.showAlert(error: error)
     }
@@ -78,6 +80,5 @@ class LoginViewController: UIViewController, Storyboarded {
         let nextVC = LoginViewControllerFactory.make()// hard-coded
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
-    
 
 }
