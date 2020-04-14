@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  navusLogin
 //
-//  Created by Marko Dimitrijevic on 10/04/2020.
+//  Created by Marko Dimitrijevic on 14/04/2020.
 //  Copyright © 2020 Marko Dimitrijevic. All rights reserved.
 //
 
@@ -12,35 +12,35 @@ import RxSwift
 
 class LoginViewController: UIViewController, Storyboarded {
     
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passField: UITextField!
-    @IBOutlet weak var logInBtn: UIButton!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var loginStackViewYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var emailTxtField: UITextField!
+    @IBOutlet weak var passTxtField: UITextField!
+    @IBOutlet weak var logBtn: UIButton!
+    @IBOutlet weak var activeIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var logStackViewYConstraint: NSLayoutConstraint!
     
     // MARK:- dependencies
     var viewModel: LoginViewModel!
     var alertErrPresenter: IAlertErrorPresenter!
     var keyboardListener: IKeyboardListener!
-    lazy var loginKeyboardHandler = LoginKeyboardHandler(centerYcnstr: loginStackViewYConstraint)
+    lazy var loginKeyboardHandler = LoginKeyboardHandler(centerYcnstr: logStackViewYConstraint)
     private let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.activityIndicator.hidesWhenStopped = true
+        self.activeIndicator.hidesWhenStopped = true
         bindToAndFromViewModel()
         manageKeyboardEvents()
     }
     
     private func bindToAndFromViewModel() {
-        let input = LoginViewModelInputFactory.make(emailField: emailField,
-                                                    passField: passField,
-                                                    btn: logInBtn)
+        let input = LoginViewModelInputFactory.make(emailField: emailTxtField,
+                                                    passField: passTxtField,
+                                                    btn: logBtn)
         let output = viewModel.transform(input: input)
         
         output.loginValidation
             .subscribe(onError: self.showAlert,
-                       onCompleted: self.disableUI)
+                       onCompleted: self.enableUI)// hard-coded
             .disposed(by: bag)
         
         output.loginRemote
@@ -60,13 +60,13 @@ class LoginViewController: UIViewController, Storyboarded {
     }
     
     private func disableUI() {
-        _ = [emailField, passField, logInBtn].map {$0.isEnabled = true}
-            activityIndicator.startAnimating()
+        _ = [emailTxtField, passTxtField, logBtn].map {$0.isEnabled = true}
+            activeIndicator.startAnimating()
     }
     
     private func enableUI() {
-        _ = [emailField, passField, logInBtn].map {$0.isEnabled = false}
-            activityIndicator.stopAnimating()
+        _ = [emailTxtField, passTxtField, logBtn].map {$0.isEnabled = false}
+            activeIndicator.stopAnimating()
     }
     
     private func showAlert(error: Error) {
@@ -78,5 +78,6 @@ class LoginViewController: UIViewController, Storyboarded {
         let nextVC = LoginViewControllerFactory.make()// hard-coded
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
+    
 
 }

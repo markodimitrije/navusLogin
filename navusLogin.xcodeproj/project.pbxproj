@@ -18,7 +18,8 @@
 		7C266F472445FB73009174C8 /* KeyboardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C266F462445FB73009174C8 /* KeyboardInfo.swift */; };
 		7C266F4A244607B5009174C8 /* IKeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C266F49244607B5009174C8 /* IKeyboardHandler.swift */; };
 		7C266F4C244607C8009174C8 /* LoginKeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C266F4B244607C8009174C8 /* LoginKeyboardHandler.swift */; };
-		7C266F4E24460D86009174C8 /* LoginViewController_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C266F4D24460D86009174C8 /* LoginViewController_iPad.storyboard */; };
+		7C266F51244613D8009174C8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C266F50244613D8009174C8 /* LoginViewController.swift */; };
+		7C266F5524461787009174C8 /* LoginViewController_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C266F5424461787009174C8 /* LoginViewController_iPad.storyboard */; };
 		7C2A914C2442023A00991AC7 /* RemoteUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A914B2442023A00991AC7 /* RemoteUserSession.swift */; };
 		7C2A914E24420A3F00991AC7 /* IRemoteUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A914D24420A3F00991AC7 /* IRemoteUserSession.swift */; };
 		7C2A915124420FDB00991AC7 /* RemoteUserSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A915024420FDB00991AC7 /* RemoteUserSessionMock.swift */; };
@@ -49,7 +50,6 @@
 		7C5B3CAE2444BB850078111E /* GlobalFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B3CAD2444BB850078111E /* GlobalFuncs.swift */; };
 		7C5B3CB12444BE810078111E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C5B3CB02444BE810078111E /* Localizable.strings */; };
 		7C5CA91A2440A6C600C4EF3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA9192440A6C600C4EF3F /* AppDelegate.swift */; };
-		7C5CA91E2440A6C600C4EF3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CA91D2440A6C600C4EF3F /* LoginViewController.swift */; };
 		7C5CA9212440A6C600C4EF3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CA91F2440A6C600C4EF3F /* Main.storyboard */; };
 		7C5CA9232440A6C900C4EF3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CA9222440A6C900C4EF3F /* Assets.xcassets */; };
 		7C5CA9262440A6C900C4EF3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CA9242440A6C900C4EF3F /* LaunchScreen.storyboard */; };
@@ -106,7 +106,8 @@
 		7C266F462445FB73009174C8 /* KeyboardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInfo.swift; sourceTree = "<group>"; };
 		7C266F49244607B5009174C8 /* IKeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IKeyboardHandler.swift; sourceTree = "<group>"; };
 		7C266F4B244607C8009174C8 /* LoginKeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginKeyboardHandler.swift; sourceTree = "<group>"; };
-		7C266F4D24460D86009174C8 /* LoginViewController_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginViewController_iPad.storyboard; sourceTree = "<group>"; };
+		7C266F50244613D8009174C8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7C266F5424461787009174C8 /* LoginViewController_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginViewController_iPad.storyboard; sourceTree = "<group>"; };
 		7C2A914B2442023A00991AC7 /* RemoteUserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserSession.swift; sourceTree = "<group>"; };
 		7C2A914D24420A3F00991AC7 /* IRemoteUserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRemoteUserSession.swift; sourceTree = "<group>"; };
 		7C2A915024420FDB00991AC7 /* RemoteUserSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserSessionMock.swift; sourceTree = "<group>"; };
@@ -138,7 +139,6 @@
 		7C5B3CB02444BE810078111E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7C5CA9162440A6C600C4EF3F /* navusLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = navusLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5CA9192440A6C600C4EF3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C5CA91D2440A6C600C4EF3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C5CA9202440A6C600C4EF3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C5CA9222440A6C900C4EF3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C5CA9252440A6C900C4EF3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -267,8 +267,8 @@
 			isa = PBXGroup;
 			children = (
 				7C266F342445C426009174C8 /* LoginViewController.storyboard */,
-				7C266F4D24460D86009174C8 /* LoginViewController_iPad.storyboard */,
-				7C5CA91D2440A6C600C4EF3F /* LoginViewController.swift */,
+				7C266F5424461787009174C8 /* LoginViewController_iPad.storyboard */,
+				7C266F50244613D8009174C8 /* LoginViewController.swift */,
 			);
 			path = LoginViewController;
 			sourceTree = "<group>";
@@ -750,7 +750,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C5CA9262440A6C900C4EF3F /* LaunchScreen.storyboard in Resources */,
-				7C266F4E24460D86009174C8 /* LoginViewController_iPad.storyboard in Resources */,
+				7C266F5524461787009174C8 /* LoginViewController_iPad.storyboard in Resources */,
 				7C5B3CB12444BE810078111E /* Localizable.strings in Resources */,
 				7C266F352445C426009174C8 /* LoginViewController.storyboard in Resources */,
 				7C5CA9232440A6C900C4EF3F /* Assets.xcassets in Resources */,
@@ -904,6 +904,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C266F51244613D8009174C8 /* LoginViewController.swift in Sources */,
 				7C5B3C9F2444AF070078111E /* DisplayAlertForError.swift in Sources */,
 				7C2A91562442105700991AC7 /* ILoginRemoteApi.swift in Sources */,
 				7C5CA95C2440B91800C4EF3F /* LoginViewModel+Input+Output.swift in Sources */,
@@ -929,7 +930,6 @@
 				7C5B3C9A2444A9260078111E /* UIViewController+Extension.swift in Sources */,
 				7C5B3C8A244477050078111E /* LoginValidatorFactory.swift in Sources */,
 				7C5CA9572440B49200C4EF3F /* LoginViewModel.swift in Sources */,
-				7C5CA91E2440A6C600C4EF3F /* LoginViewController.swift in Sources */,
 				7C5CA91A2440A6C600C4EF3F /* AppDelegate.swift in Sources */,
 				7C5B3C87244476CB0078111E /* PassFieldValidator.swift in Sources */,
 				7C7DC67B2440DF3700479A95 /* LoginValidator.swift in Sources */,

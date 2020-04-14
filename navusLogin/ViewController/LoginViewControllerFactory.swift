@@ -10,8 +10,6 @@ import UIKit
 
 class LoginViewControllerFactory {
     static func make() -> LoginViewController {
-//        let loginSb = UIStoryboard.init(name: "LoginViewController", bundle: nil)
-//        let loginVC = LoginViewController.instantiate(using: loginSb)
         let loginVC = StoryboardedViewControllerFactory.make(type: LoginViewController.self) as! LoginViewController
         loginVC.viewModel = LoginViewModelFactory.make()
         loginVC.alertErrPresenter = AlertErrorPresenter()
