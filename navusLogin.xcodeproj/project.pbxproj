@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		42CF0DA272F1E2FE492A6385 /* Pods_navusLoginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E768777E985B17B5FD65E99A /* Pods_navusLoginTests.framework */; };
-		7C17BAF92444CE380057E5A8 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C17BAF82444CE370057E5A8 /* MyViewController.swift */; };
 		7C2A914C2442023A00991AC7 /* RemoteUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A914B2442023A00991AC7 /* RemoteUserSession.swift */; };
 		7C2A914E24420A3F00991AC7 /* IRemoteUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A914D24420A3F00991AC7 /* IRemoteUserSession.swift */; };
 		7C2A915124420FDB00991AC7 /* RemoteUserSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A915024420FDB00991AC7 /* RemoteUserSessionMock.swift */; };
@@ -87,7 +86,6 @@
 /* Begin PBXFileReference section */
 		3C512994089616A9A27E40BA /* Pods-navusLoginUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-navusLoginUITests.debug.xcconfig"; path = "Target Support Files/Pods-navusLoginUITests/Pods-navusLoginUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C54813BAF68980064F136B3 /* Pods-navusLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-navusLogin.release.xcconfig"; path = "Target Support Files/Pods-navusLogin/Pods-navusLogin.release.xcconfig"; sourceTree = "<group>"; };
-		7C17BAF82444CE370057E5A8 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		7C2A914B2442023A00991AC7 /* RemoteUserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserSession.swift; sourceTree = "<group>"; };
 		7C2A914D24420A3F00991AC7 /* IRemoteUserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRemoteUserSession.swift; sourceTree = "<group>"; };
 		7C2A915024420FDB00991AC7 /* RemoteUserSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserSessionMock.swift; sourceTree = "<group>"; };
@@ -426,7 +424,6 @@
 				7C5CA91D2440A6C600C4EF3F /* LoginViewController.swift */,
 				7C5CA9512440ABC100C4EF3F /* LoginViewController.storyboard */,
 				7C5CA94C2440AAA400C4EF3F /* LoginViewControllerFactory.swift */,
-				7C17BAF82444CE370057E5A8 /* MyViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -852,7 +849,6 @@
 				7C5CA91E2440A6C600C4EF3F /* LoginViewController.swift in Sources */,
 				7C5CA91A2440A6C600C4EF3F /* AppDelegate.swift in Sources */,
 				7C5B3C87244476CB0078111E /* PassFieldValidator.swift in Sources */,
-				7C17BAF92444CE380057E5A8 /* MyViewController.swift in Sources */,
 				7C7DC67B2440DF3700479A95 /* LoginValidator.swift in Sources */,
 				7C5CA9502440AAFD00C4EF3F /* Storyboarded.swift in Sources */,
 				7C5B3CAE2444BB850078111E /* GlobalFuncs.swift in Sources */,
