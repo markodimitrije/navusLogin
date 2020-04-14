@@ -10,8 +10,9 @@ import UIKit
 
 class LoginViewControllerFactory {
     static func make() -> LoginViewController {
-        let loginSb = UIStoryboard.init(name: "LoginViewController", bundle: nil)
-        let loginVC = LoginViewController.instantiate(using: loginSb)
+//        let loginSb = UIStoryboard.init(name: "LoginViewController", bundle: nil)
+//        let loginVC = LoginViewController.instantiate(using: loginSb)
+        let loginVC = StoryboardedViewControllerFactory.make(type: LoginViewController.self) as! LoginViewController
         loginVC.viewModel = LoginViewModelFactory.make()
         loginVC.alertErrPresenter = AlertErrorPresenter()
         loginVC.keyboardListener = KeyboardListener()
@@ -24,4 +25,18 @@ class LoginViewModelFactory {
         return LoginViewModel(validator: LoginValidatorFactory.make(),
                               loginRemoteApi: LoginRemoteApiFactory.make())
     }
+}
+
+class StoryboardedViewControllerFactory {
+    static func make(type: Storyboarded.Type) -> Storyboarded {
+        let name = String(describing: type)
+        var sb: UIStoryboard!
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            sb = UIStoryboard.init(name: name, bundle: nil)
+        } else {
+            sb = UIStoryboard.init(name: name + "_iPad", bundle: nil)
+        }
+        return type.instantiate(using: sb)
+    }
+    
 }

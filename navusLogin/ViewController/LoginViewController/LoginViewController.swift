@@ -80,24 +80,3 @@ class LoginViewController: UIViewController, Storyboarded {
     }
 
 }
-
-protocol IKeyboardHandler {
-    func handleKeyboardEvent(info: IKeyboardInfo)
-}
-
-class LoginKeyboardHandler: IKeyboardHandler {
-    
-    func handleKeyboardEvent(info: IKeyboardInfo) {
-        if info.getInfo().0 == UIApplication.keyboardWillShowNotification {
-            if self.centerYcnstr.constant == 0 {
-                self.centerYcnstr.constant -= info.getInfo().size.height/2
-            }
-        } else if info.getInfo().0 == UIApplication.keyboardWillHideNotification {
-            self.centerYcnstr.constant = 0
-        }
-    }
-    private let centerYcnstr: NSLayoutConstraint
-    init(centerYcnstr: NSLayoutConstraint) {
-        self.centerYcnstr = centerYcnstr
-    }
-}
