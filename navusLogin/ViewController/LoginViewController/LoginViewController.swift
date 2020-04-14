@@ -44,7 +44,7 @@ class LoginViewController: UIViewController, Storyboarded {
             .disposed(by: bag)
         
         output.loginRemote
-            .subscribe(onError: alertErrPresenter.showAlert,
+            .subscribe(onError: self.showAlert,
                        onCompleted: {self.enableUI(); self.navigateToNext()})
             .disposed(by: bag)
     }
@@ -60,12 +60,12 @@ class LoginViewController: UIViewController, Storyboarded {
     }
     
     private func disableUI() {
-        _ = [emailTxtField, passTxtField, logBtn].map {$0.isEnabled = true}
+        _ = [emailTxtField, passTxtField, logBtn].map {$0.isEnabled = false}
             activeIndicator.startAnimating()
     }
     
     private func enableUI() {
-        _ = [emailTxtField, passTxtField, logBtn].map {$0.isEnabled = false}
+        _ = [emailTxtField, passTxtField, logBtn].map {$0.isEnabled = true}
             activeIndicator.stopAnimating()
     }
     
