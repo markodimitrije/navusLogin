@@ -9,12 +9,17 @@
 import UIKit
 
 class LoginViewController: UIViewController, Storyboarded {
-
+    
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passField: UITextField!
+    @IBOutlet weak var logInBtn: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     var viewModel: ILoginViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.showAlert()
+//        self.showAlert()
     }
     
     private func enableUI(with enable: Bool) {
