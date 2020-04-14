@@ -25,7 +25,7 @@
                                             <constraint firstAttribute="width" secondItem="28T-RM-TyZ" secondAttribute="height" multiplier="50:9" id="iAO-nL-rnO"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your e-mail and password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3o-9w-NoJ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your e-mail and password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="D3o-9w-NoJ">
                                         <rect key="frame" x="0.0" y="79.5" width="374" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -85,8 +85,10 @@
                     <navigationItem key="navigationItem" id="gue-Rs-rVD"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="syv-Ux-QuO" id="PH5-b9-FV1"/>
                         <outlet property="emailField" destination="fmF-h8-hsb" id="Mdw-Bc-52A"/>
                         <outlet property="logInBtn" destination="Mpc-N3-s3c" id="07Z-Uy-wbd"/>
+                        <outlet property="loginStackViewYConstraint" destination="bPT-gK-Pjf" id="OX7-Ni-PGb"/>
                         <outlet property="passField" destination="PYO-yN-eGo" id="QT8-A5-dVa"/>
                     </connections>
                 </viewController>

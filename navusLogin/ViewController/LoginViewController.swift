@@ -16,16 +16,20 @@ class LoginViewController: UIViewController, Storyboarded {
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var logInBtn: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loginStackViewYConstraint: NSLayoutConstraint!
     
+    // MARK:- dependencies
     var viewModel: LoginViewModel!
     var alertErrPresenter: IAlertErrorPresenter!
+    var keyboardListener: IKeyboardListener!
+    lazy var loginKeyboardHandler = LoginKeyboardHandler(centerYcnstr: loginStackViewYConstraint)
     private let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.activityIndicator.hidesWhenStopped = true
         bindToAndFromViewModel()
-//        self.showAlert()
+        manageKeyboardEvents()
     }
     
     private func bindToAndFromViewModel() {
@@ -43,6 +47,16 @@ class LoginViewController: UIViewController, Storyboarded {
             .subscribe(onError: alertErrPresenter.showAlert,
                        onCompleted: {self.enableUI(); self.navigateToNext()})
             .disposed(by: bag)
+    }
+    
+    private func manageKeyboardEvents() {
+        keyboardListener.getKeyboardEvents()
+            .subscribe(onNext: { [weak self] (info) in
+                self?.loginKeyboardHandler.handleKeyboardEvent(info: info)
+                UIView.animate(withDuration: 0.5) {
+                    self?.view.layoutIfNeeded()
+                }
+            }).disposed(by: bag)
     }
     
     private func disableUI() {
@@ -67,15 +81,23 @@ class LoginViewController: UIViewController, Storyboarded {
 
 }
 
-class LoginViewModelInputFactory {
-    static func make(emailField: UITextField, passField: UITextField, btn: UIButton) -> LoginViewModel.Input {
-        let btnSig = btn.rx.tap.asObservable()
-        let emailSig = emailField.rx.text.asObservable().map {$0 ?? ""}
-        let passSig = passField.rx.text.asObservable().map {$0 ?? ""}
-        let credentialsSig = Observable.combineLatest(emailSig, passSig) {
-            LoginCredentials(email: $0, password: $1)
+protocol IKeyboardHandler {
+    func handleKeyboardEvent(info: IKeyboardInfo)
+}
+
+class LoginKeyboardHandler: IKeyboardHandler {
+    
+    func handleKeyboardEvent(info: IKeyboardInfo) {
+        if info.getInfo().0 == UIApplication.keyboardWillShowNotification {
+            if self.centerYcnstr.constant == 0 {
+                self.centerYcnstr.constant -= info.getInfo().size.height/2
+            }
+        } else if info.getInfo().0 == UIApplication.keyboardWillHideNotification {
+            self.centerYcnstr.constant = 0
         }
-        let inputSig = btnSig.withLatestFrom(credentialsSig).map {$0 as ILoginCredentials}
-        return LoginViewModel.Input(userCredentials: inputSig)
+    }
+    private let centerYcnstr: NSLayoutConstraint
+    init(centerYcnstr: NSLayoutConstraint) {
+        self.centerYcnstr = centerYcnstr
     }
 }

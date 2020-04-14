@@ -14,6 +14,7 @@ class LoginViewControllerFactory {
         let loginVC = LoginViewController.instantiate(using: loginSb)
         loginVC.viewModel = LoginViewModelFactory.make()
         loginVC.alertErrPresenter = AlertErrorPresenter()
+        loginVC.keyboardListener = KeyboardListener()
         return loginVC
     }
 }
