@@ -13,12 +13,13 @@ class LoginViewControllerFactory {
         let loginSb = UIStoryboard.init(name: "LoginViewController", bundle: nil)
         let loginVC = LoginViewController.instantiate(using: loginSb)
         loginVC.viewModel = LoginViewModelFactory.make()
+        loginVC.alertErrPresenter = AlertErrorPresenter()
         return loginVC
     }
 }
 
 class LoginViewModelFactory {
-    static func make() -> ILoginViewModel {
+    static func make() -> LoginViewModel {
         return LoginViewModel(validator: LoginValidatorFactory.make(),
                               loginRemoteApi: LoginRemoteApiFactory.make())
     }

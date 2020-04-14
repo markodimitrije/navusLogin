@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		42CF0DA272F1E2FE492A6385 /* Pods_navusLoginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E768777E985B17B5FD65E99A /* Pods_navusLoginTests.framework */; };
 		7C266F352445C426009174C8 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C266F342445C426009174C8 /* LoginViewController.storyboard */; };
+		7C266F382445CEB0009174C8 /* IAlertErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C266F372445CEB0009174C8 /* IAlertErrorPresenter.swift */; };
+		7C266F3A2445CEC8009174C8 /* AlertErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C266F392445CEC8009174C8 /* AlertErrorPresenter.swift */; };
 		7C2A914C2442023A00991AC7 /* RemoteUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A914B2442023A00991AC7 /* RemoteUserSession.swift */; };
 		7C2A914E24420A3F00991AC7 /* IRemoteUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A914D24420A3F00991AC7 /* IRemoteUserSession.swift */; };
 		7C2A915124420FDB00991AC7 /* RemoteUserSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A915024420FDB00991AC7 /* RemoteUserSessionMock.swift */; };
@@ -87,6 +89,8 @@
 		3C512994089616A9A27E40BA /* Pods-navusLoginUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-navusLoginUITests.debug.xcconfig"; path = "Target Support Files/Pods-navusLoginUITests/Pods-navusLoginUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C54813BAF68980064F136B3 /* Pods-navusLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-navusLogin.release.xcconfig"; path = "Target Support Files/Pods-navusLogin/Pods-navusLogin.release.xcconfig"; sourceTree = "<group>"; };
 		7C266F342445C426009174C8 /* LoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		7C266F372445CEB0009174C8 /* IAlertErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAlertErrorPresenter.swift; sourceTree = "<group>"; };
+		7C266F392445CEC8009174C8 /* AlertErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertErrorPresenter.swift; sourceTree = "<group>"; };
 		7C2A914B2442023A00991AC7 /* RemoteUserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserSession.swift; sourceTree = "<group>"; };
 		7C2A914D24420A3F00991AC7 /* IRemoteUserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRemoteUserSession.swift; sourceTree = "<group>"; };
 		7C2A915024420FDB00991AC7 /* RemoteUserSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserSessionMock.swift; sourceTree = "<group>"; };
@@ -194,6 +198,16 @@
 				EE70DE51812B9D0BD441E7BB /* Pods-navusLoginUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7C266F362445CE9A009174C8 /* AlertErrorPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				7C266F372445CEB0009174C8 /* IAlertErrorPresenter.swift */,
+				7C266F392445CEC8009174C8 /* AlertErrorPresenter.swift */,
+				7C5B3C9B2444AEE70078111E /* Alert */,
+			);
+			path = AlertErrorPresenter;
 			sourceTree = "<group>";
 		};
 		7C2A914A2442023300991AC7 /* RemoteUserSession */ = {
@@ -361,10 +375,10 @@
 		7C5CA9182440A6C600C4EF3F /* navusLogin */ = {
 			isa = PBXGroup;
 			children = (
+				7C266F362445CE9A009174C8 /* AlertErrorPresenter */,
 				7C5B3CAF2444BE6C0078111E /* Localization */,
 				7C5B3CAC2444BB720078111E /* GlobalFuncs */,
 				7C5B3CA42444B4A00078111E /* Data */,
-				7C5B3C9B2444AEE70078111E /* Alert */,
 				7C5B3C982444A9140078111E /* Extension */,
 				7C2A91522442102A00991AC7 /* Network */,
 				7C7DC6852440E03100479A95 /* Model */,
@@ -841,6 +855,7 @@
 				7C2A914C2442023A00991AC7 /* RemoteUserSession.swift in Sources */,
 				7C5B3CAB2444B52A0078111E /* AlertInfo.swift in Sources */,
 				7C7DC6882440E04300479A95 /* ILoginCredentials.swift in Sources */,
+				7C266F3A2445CEC8009174C8 /* AlertErrorPresenter.swift in Sources */,
 				7C5CA9552440B46400C4EF3F /* ILoginViewModel.swift in Sources */,
 				7C5CA94D2440AAA400C4EF3F /* LoginViewControllerFactory.swift in Sources */,
 				7C5B3C9A2444A9260078111E /* UIViewController+Extension.swift in Sources */,
@@ -857,6 +872,7 @@
 				7C5CA95A2440B71E00C4EF3F /* ViewModelType.swift in Sources */,
 				7C7DC68D2440E42400479A95 /* ValidationEnum.swift in Sources */,
 				7C5B3CA32444B44B0078111E /* ErrorAlertControllerFactory.swift in Sources */,
+				7C266F382445CEB0009174C8 /* IAlertErrorPresenter.swift in Sources */,
 				7C5B3CA82444B4E90078111E /* MyError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

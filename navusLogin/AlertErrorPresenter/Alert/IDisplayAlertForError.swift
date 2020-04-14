@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol IDisplayAlertForError {
-    func displayAlert(for error: Error)
-}
+//protocol IDisplayAlertForError {
+//    func displayAlert(for error: Error)
+//}

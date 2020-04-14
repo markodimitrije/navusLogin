@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ILoginViewModel {
+protocol ILoginViewModel: ViewModelType {
     
 }
