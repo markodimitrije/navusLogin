@@ -40,8 +40,6 @@
 		7C5B3C9524448DA40078111E /* EmailFieldValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B3C9424448DA40078111E /* EmailFieldValidatorTest.swift */; };
 		7C5B3C9724448F710078111E /* PasswordFieldValidationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B3C9624448F710078111E /* PasswordFieldValidationTest.swift */; };
 		7C5B3C9A2444A9260078111E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B3C992444A9260078111E /* UIViewController+Extension.swift */; };
-		7C5B3C9D2444AEF40078111E /* IDisplayAlertForError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B3C9C2444AEF40078111E /* IDisplayAlertForError.swift */; };
-		7C5B3C9F2444AF070078111E /* DisplayAlertForError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B3C9E2444AF070078111E /* DisplayAlertForError.swift */; };
 		7C5B3CA12444B42B0078111E /* AlertInfoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B3CA02444B42B0078111E /* AlertInfoFactory.swift */; };
 		7C5B3CA32444B44B0078111E /* ErrorAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B3CA22444B44B0078111E /* ErrorAlertControllerFactory.swift */; };
 		7C5B3CA62444B4B10078111E /* ErrorAlertInfoDictionaryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B3CA52444B4B10078111E /* ErrorAlertInfoDictionaryFactory.swift */; };
@@ -128,8 +126,6 @@
 		7C5B3C9424448DA40078111E /* EmailFieldValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFieldValidatorTest.swift; sourceTree = "<group>"; };
 		7C5B3C9624448F710078111E /* PasswordFieldValidationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordFieldValidationTest.swift; sourceTree = "<group>"; };
 		7C5B3C992444A9260078111E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		7C5B3C9C2444AEF40078111E /* IDisplayAlertForError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplayAlertForError.swift; sourceTree = "<group>"; };
-		7C5B3C9E2444AF070078111E /* DisplayAlertForError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAlertForError.swift; sourceTree = "<group>"; };
 		7C5B3CA02444B42B0078111E /* AlertInfoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertInfoFactory.swift; sourceTree = "<group>"; };
 		7C5B3CA22444B44B0078111E /* ErrorAlertControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertControllerFactory.swift; sourceTree = "<group>"; };
 		7C5B3CA52444B4B10078111E /* ErrorAlertInfoDictionaryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertInfoDictionaryFactory.swift; sourceTree = "<group>"; };
@@ -373,8 +369,6 @@
 		7C5B3C9B2444AEE70078111E /* Alert */ = {
 			isa = PBXGroup;
 			children = (
-				7C5B3C9C2444AEF40078111E /* IDisplayAlertForError.swift */,
-				7C5B3C9E2444AF070078111E /* DisplayAlertForError.swift */,
 				7C5B3CA22444B44B0078111E /* ErrorAlertControllerFactory.swift */,
 				7C5B3CA02444B42B0078111E /* AlertInfoFactory.swift */,
 			);
@@ -905,11 +899,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C266F51244613D8009174C8 /* LoginViewController.swift in Sources */,
-				7C5B3C9F2444AF070078111E /* DisplayAlertForError.swift in Sources */,
 				7C2A91562442105700991AC7 /* ILoginRemoteApi.swift in Sources */,
 				7C5CA95C2440B91800C4EF3F /* LoginViewModel+Input+Output.swift in Sources */,
 				7C266F4A244607B5009174C8 /* IKeyboardHandler.swift in Sources */,
-				7C5B3C9D2444AEF40078111E /* IDisplayAlertForError.swift in Sources */,
 				7C266F422445FB33009174C8 /* IKeyboardListener.swift in Sources */,
 				7C266F402445FB13009174C8 /* KeyboardListener.swift in Sources */,
 				7C5B3C85244476BB0078111E /* EmailFieldValidator.swift in Sources */,

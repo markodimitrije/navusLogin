@@ -17,7 +17,7 @@ class LoginViewModelInputFactory {
         let credentialsSig = Observable.combineLatest(emailSig, passSig) {
             LoginCredentials(email: $0, password: $1)
         }
-        let inputSig = btnSig.withLatestFrom(credentialsSig).map {$0 as ILoginCredentials}
+        let inputSig = btnSig.withLatestFrom(credentialsSig).map {$0 as ILoginCredentials}.take(1)
         return LoginViewModel.Input(userCredentials: inputSig)
     }
 }

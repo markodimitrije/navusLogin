@@ -13,7 +13,13 @@ import RxSwift
 class LoginViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var emailTxtField: UITextField!
+    {
+        didSet {emailTxtField.text = "john.doe@gmail.com"}
+    }
     @IBOutlet weak var passTxtField: UITextField!
+    {
+        didSet {passTxtField.text = "123456"}
+    }
     @IBOutlet weak var logBtn: UIButton!
     @IBOutlet weak var activeIndicator: UIActivityIndicatorView!
     @IBOutlet weak var logStackViewYConstraint: NSLayoutConstraint!
@@ -62,11 +68,13 @@ class LoginViewController: UIViewController, Storyboarded {
     
     private func disableUI() {
         _ = [emailTxtField, passTxtField, logBtn].map {$0.isEnabled = false}
+            logBtn.setTitle("", for: .normal)
             activeIndicator.startAnimating()
     }
     
     private func enableUI() {
         _ = [emailTxtField, passTxtField, logBtn].map {$0.isEnabled = true}
+            logBtn.setTitle("Log in", for: .normal)
             activeIndicator.stopAnimating()
     }
     

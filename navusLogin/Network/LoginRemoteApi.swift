@@ -15,9 +15,9 @@ class LoginRemoteApi: ILoginRemoteApi {
     }
     
     func login(loginCredentials: ILoginCredentials) -> Observable<IRemoteUserSession> {
-        let remoteMock = RemoteUserSession(credentials: LoginCredentials(email: "", password: ""),
+        let remoteMock = RemoteUserSession(credentials: LoginCredentials(email: "",
+                                                                         password: ""),
                                            token: "Bearer_123")
-        return Observable.just(remoteMock) //TODO marko
-        
+        return Observable.just(remoteMock).delay(RxTimeInterval.seconds(3), scheduler: MainScheduler.instance) //TODO marko
     }
 }
