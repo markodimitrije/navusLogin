@@ -62,6 +62,9 @@
 		7C5DCF0D244228FE00334169 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DCF0C244228FE00334169 /* LoginViewModelTest.swift */; };
 		7C60C77B2441BA3A00F787D4 /* LoginValidationSignalFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60C77A2441BA3A00F787D4 /* LoginValidationSignalFactory.swift */; };
 		7C60C77E2441BA6E00F787D4 /* LoginProcessSignalFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60C77D2441BA6E00F787D4 /* LoginProcessSignalFactoryTest.swift */; };
+		7C66B4282446F49200E2C96A /* UserStateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C66B4272446F49200E2C96A /* UserStateRepository.swift */; };
+		7C66B42A2446F49A00E2C96A /* IUserStateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C66B4292446F49A00E2C96A /* IUserStateRepository.swift */; };
+		7C66B42D2446F67F00E2C96A /* UserStateRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C66B42C2446F67F00E2C96A /* UserStateRepositoryTest.swift */; };
 		7C7DC67B2440DF3700479A95 /* LoginValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC67A2440DF3700479A95 /* LoginValidator.swift */; };
 		7C7DC67F2440DF7C00479A95 /* AcceptLoginValidatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC67E2440DF7C00479A95 /* AcceptLoginValidatorMock.swift */; };
 		7C7DC6812440DFAB00479A95 /* RejectLoginValidatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC6802440DFAB00479A95 /* RejectLoginValidatorMock.swift */; };
@@ -154,6 +157,9 @@
 		7C5DCF0C244228FE00334169 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 		7C60C77A2441BA3A00F787D4 /* LoginValidationSignalFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidationSignalFactory.swift; sourceTree = "<group>"; };
 		7C60C77D2441BA6E00F787D4 /* LoginProcessSignalFactoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProcessSignalFactoryTest.swift; sourceTree = "<group>"; };
+		7C66B4272446F49200E2C96A /* UserStateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateRepository.swift; sourceTree = "<group>"; };
+		7C66B4292446F49A00E2C96A /* IUserStateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserStateRepository.swift; sourceTree = "<group>"; };
+		7C66B42C2446F67F00E2C96A /* UserStateRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateRepositoryTest.swift; sourceTree = "<group>"; };
 		7C7DC67A2440DF3700479A95 /* LoginValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidator.swift; sourceTree = "<group>"; };
 		7C7DC67E2440DF7C00479A95 /* AcceptLoginValidatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptLoginValidatorMock.swift; sourceTree = "<group>"; };
 		7C7DC6802440DFAB00479A95 /* RejectLoginValidatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectLoginValidatorMock.swift; sourceTree = "<group>"; };
@@ -432,6 +438,7 @@
 		7C5CA9182440A6C600C4EF3F /* navusLogin */ = {
 			isa = PBXGroup;
 			children = (
+				7C66B4262446F47900E2C96A /* Repository */,
 				7C266F3D2445FAF2009174C8 /* Keyboard */,
 				7C266F362445CE9A009174C8 /* AlertErrorPresenter */,
 				7C5B3CAF2444BE6C0078111E /* Localization */,
@@ -456,6 +463,7 @@
 		7C5CA92F2440A6CA00C4EF3F /* navusLoginTests */ = {
 			isa = PBXGroup;
 			children = (
+				7C66B42B2446F67100E2C96A /* Repository */,
 				7C7DC67C2440DF6600479A95 /* Mock */,
 				7C5CA94A2440A9CD00C4EF3F /* LoginViewModelTests */,
 				7C5B3C8B244477650078111E /* LoginValidation */,
@@ -553,6 +561,23 @@
 				7C411A4D244215C7009EC1D5 /* LoginRemoteSignalFactoryTest.swift */,
 			);
 			path = LoginProcessSignalFactory;
+			sourceTree = "<group>";
+		};
+		7C66B4262446F47900E2C96A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7C66B4292446F49A00E2C96A /* IUserStateRepository.swift */,
+				7C66B4272446F49200E2C96A /* UserStateRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		7C66B42B2446F67100E2C96A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7C66B42C2446F67F00E2C96A /* UserStateRepositoryTest.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		7C7DC6792440DEFD00479A95 /* LoginValidation */ = {
@@ -901,6 +926,7 @@
 				7C266F51244613D8009174C8 /* LoginViewController.swift in Sources */,
 				7C2A91562442105700991AC7 /* ILoginRemoteApi.swift in Sources */,
 				7C5CA95C2440B91800C4EF3F /* LoginViewModel+Input+Output.swift in Sources */,
+				7C66B4282446F49200E2C96A /* UserStateRepository.swift in Sources */,
 				7C266F4A244607B5009174C8 /* IKeyboardHandler.swift in Sources */,
 				7C266F422445FB33009174C8 /* IKeyboardListener.swift in Sources */,
 				7C266F402445FB13009174C8 /* KeyboardListener.swift in Sources */,
@@ -931,6 +957,7 @@
 				7C266F3C2445F580009174C8 /* LoginViewModelInputFactory.swift in Sources */,
 				7C266F4C244607C8009174C8 /* LoginKeyboardHandler.swift in Sources */,
 				7C7DC6912440E46C00479A95 /* LoginValidationError.swift in Sources */,
+				7C66B42A2446F49A00E2C96A /* IUserStateRepository.swift in Sources */,
 				7C2A914E24420A3F00991AC7 /* IRemoteUserSession.swift in Sources */,
 				7C266F472445FB73009174C8 /* KeyboardInfo.swift in Sources */,
 				7C5CA95A2440B71E00C4EF3F /* ViewModelType.swift in Sources */,
@@ -953,6 +980,7 @@
 				7C539F2D2441D9EC0096DF3F /* EmptyUserInputMock.swift in Sources */,
 				7C411A4E244215C7009EC1D5 /* LoginRemoteSignalFactoryTest.swift in Sources */,
 				7C411A4C24421470009EC1D5 /* LoginRemoteApiSuccessMock.swift in Sources */,
+				7C66B42D2446F67F00E2C96A /* UserStateRepositoryTest.swift in Sources */,
 				7C411A4A24421462009EC1D5 /* LoginRemoteApiErrorMock.swift in Sources */,
 				7C5CA9312440A6CA00C4EF3F /* navusLoginTests.swift in Sources */,
 				7C5B3C90244478070078111E /* EmailValidatorMock.swift in Sources */,

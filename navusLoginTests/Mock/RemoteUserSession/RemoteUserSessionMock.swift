@@ -16,7 +16,7 @@ class RemoteUserSessionMock: IRemoteUserSession {
     }
     
     func getToken() -> String {
-        return "Bearer_123456"
+        return "token"
     }
     
 }
