@@ -45,15 +45,16 @@ class LoginViewController: UIViewController, Storyboarded {
         
         let output = viewModel.transform(input: input)
         
-        output.loginValidation
-            .subscribe(onError: self.errorCatched,
-                       onCompleted: self.disableUI)
+        output.loginSignal
+            .subscribe(onNext: displayLoading,
+                       onError: errorCatched,
+                       onCompleted: loginCompleted)
             .disposed(by: bag)
-        
-        output.loginRemote
-            .subscribe(onError: self.errorCatched,
-                       onCompleted: {self.enableUI(); self.navigateToNext()})
-            .disposed(by: bag)
+    }
+    
+    private func displayLoading(process: Bool) {
+        print("is login in process = \(process)")
+        disableUI()
     }
     
     private func manageKeyboardEvents() {
@@ -79,9 +80,18 @@ class LoginViewController: UIViewController, Storyboarded {
     }
     
     private func errorCatched(error: Error) {
+        refreshController()
+        alertErrPresenter.showAlert(error: error)
+    }
+    
+    private func loginCompleted() {
+        refreshController()
+        navigateToNext()
+    }
+    
+    private func refreshController() {
         bindToAndFromViewModel()
         enableUI()
-        alertErrPresenter.showAlert(error: error)
     }
     
     private func navigateToNext() {

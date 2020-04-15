@@ -17,7 +17,7 @@ class LoginProcessSignalFactoryTest: XCTestCase {
     
     let userInputMock = EmptyUserInputMock()
     
-    func testLoginValidationSignal_ShouldEmit_OnCompleteFor_AcceptValidator() {
+    func testLoginValidationSignal_ShouldEmit_OnNextFor_AcceptValidator() {
         //arrange
         let acceptValidator = AcceptLoginValidatorMock()
         let sut = LoginValidationSignalFactory(validator: acceptValidator)

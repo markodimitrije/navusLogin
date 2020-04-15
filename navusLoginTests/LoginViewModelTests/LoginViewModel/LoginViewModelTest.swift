@@ -20,7 +20,7 @@ class LoginViewModelTest: XCTestCase {
         let input = LoginViewModel.Input(userCredentials: userInputObs)
         let output = sut.transform(input: input)
         do {
-            _ = try output.loginValidation.toBlocking().first()
+            _ = try output.loginSignal.toBlocking().first()
         } catch {
             XCTAssertTrue(error is LoginValidationError)
         }
@@ -33,14 +33,14 @@ class LoginViewModelTest: XCTestCase {
         let output = sut.transform(input: input)
         //assert 1
         do {
-            let _ = try output.loginValidation.toBlocking().toArray() // onCompleted
+            let _ = try output.loginSignal.toBlocking().toArray() // onCompleted
             XCTAssertTrue(true)
         } catch {
             XCTAssertTrue(false)
         }
         //assert 2
         do {
-            let _ = try output.loginRemote.toBlocking().toArray() // onCompleted
+            let _ = try output.loginSignal.toBlocking().toArray() // onCompleted
             XCTAssertTrue(false)
         } catch {
             XCTAssertTrue(error is LoginError)
@@ -53,8 +53,8 @@ class LoginViewModelTest: XCTestCase {
                                  loginRemoteApi: LoginRemoteApiSuccessMock())
         let input = LoginViewModel.Input(userCredentials: userInputObs)
         let output = sut.transform(input: input)
-        let _ = try output.loginValidation.toBlocking().toArray()
-        let _ = try output.loginRemote.toBlocking().toArray()
+        let events = try output.loginSignal.toBlocking().toArray()
+        XCTAssertEqual(1, events.count)
         XCTAssertTrue(true) // both previous were completed
     }
 }

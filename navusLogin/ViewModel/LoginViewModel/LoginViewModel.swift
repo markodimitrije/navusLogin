@@ -19,13 +19,18 @@ class LoginViewModel: ILoginViewModel {
     }
     
     func transform(input: Input) -> Output {
+          
         let validationSignalFactory = LoginValidationSignalFactory(validator: self.validator)
         let loginValidationSignal = input.userCredentials.flatMap(validationSignalFactory.map(userInput:))
         
         let remoteSignalFactory = LoginRemoteSignalFactory(loginRemoteApi: self.loginRemoteApi)
-        let loginRemoteSignal = input.userCredentials.flatMap(remoteSignalFactory.map(userInput:))
-  
-        return Output(loginValidation: loginValidationSignal, loginRemote: loginRemoteSignal)
+        
+        let trigger = Observable.just(true).withLatestFrom(input.userCredentials)
+        let loginRemoteSignal = remoteSignalFactory.createWith(sig: trigger)
+        
+        let loginSignal = loginValidationSignal.concat(loginRemoteSignal)
+        
+        return Output(loginSignal: loginSignal)
     }
     
 }

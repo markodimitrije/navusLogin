@@ -19,6 +19,7 @@ class LoginValidationSignalFactory {
         return Observable.create { (observer) -> Disposable in
             switch self.validator.validate(userInput: userInput) {
                 case .valid:
+                    observer.onNext(true)
                     observer.onCompleted()
                 case .invalid(let error):
                     observer.onError(error)

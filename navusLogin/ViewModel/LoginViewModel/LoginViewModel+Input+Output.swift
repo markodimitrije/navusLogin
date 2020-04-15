@@ -13,7 +13,6 @@ extension LoginViewModel: ViewModelType {
         var userCredentials: Observable<ILoginCredentials>
     }
     struct Output {
-        var loginValidation: Observable<Bool>
-        var loginRemote: Observable<Bool>// TODO marko: Void..
+        var loginSignal: Observable<Bool>
     }
 }
