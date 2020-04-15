@@ -10,7 +10,7 @@ import RxSwift
 @testable import navusLogin
 
 class LoginRemoteApiSuccessMock: ILoginRemoteApi {
-    func login(loginCredentials: ILoginCredentials) -> Observable<IRemoteUserSession> {
+    func loginWith(sig: Observable<ILoginCredentials>) -> Observable<IRemoteUserSession> {
         return Observable.create { (observer) -> Disposable in
 //            observer.onNext(RemoteUserSessionMock())
             observer.onCompleted()

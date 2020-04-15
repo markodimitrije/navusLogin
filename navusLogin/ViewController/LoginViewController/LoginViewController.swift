@@ -53,7 +53,6 @@ class LoginViewController: UIViewController, Storyboarded {
     }
     
     private func displayLoading(process: Bool) {
-        print("is login in process = \(process)")
         disableUI()
     }
     

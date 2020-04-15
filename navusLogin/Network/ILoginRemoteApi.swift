@@ -9,6 +9,5 @@
 import RxSwift
 
 protocol ILoginRemoteApi {
-    func login(loginCredentials: ILoginCredentials) -> Observable<IRemoteUserSession>
     func loginWith(sig: Observable<ILoginCredentials>) -> Observable<IRemoteUserSession>
 }

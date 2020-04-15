@@ -10,7 +10,7 @@ import RxSwift
 @testable import navusLogin
 
 class LoginRemoteApiErrorMock: ILoginRemoteApi {
-    func login(loginCredentials: ILoginCredentials) -> Observable<IRemoteUserSession> {
+    func loginWith(sig: Observable<ILoginCredentials>) -> Observable<IRemoteUserSession> {
         Observable.create { (observer) -> Disposable in
             observer.onError(LoginError.unknownUser)
             return Disposables.create()
