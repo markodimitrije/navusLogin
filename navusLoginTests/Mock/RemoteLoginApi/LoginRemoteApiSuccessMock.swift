@@ -12,7 +12,6 @@ import RxSwift
 class LoginRemoteApiSuccessMock: ILoginRemoteApi {
     func loginWith(sig: Observable<ILoginCredentials>) -> Observable<IRemoteUserSession> {
         return Observable.create { (observer) -> Disposable in
-//            observer.onNext(RemoteUserSessionMock())
             observer.onCompleted()
             return Disposables.create()
         }.subscribeOn(MainScheduler.instance)

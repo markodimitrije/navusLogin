@@ -15,8 +15,8 @@ class LoginRemoteSignalFactory {
         self.loginRemoteApi = loginRemoteApi
     }
     
-    func createWith(sig: Observable<ILoginCredentials>) -> Observable<Bool> {
-        return loginRemoteApi.loginWith(sig: sig).map({_ in return true})
+    func createWith(sig: Observable<ILoginCredentials>) -> Observable<Void> {
+        return loginRemoteApi.loginWith(sig: sig).map({_ in return ()})
     }
     
 }

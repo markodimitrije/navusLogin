@@ -46,14 +46,10 @@ class LoginViewController: UIViewController, Storyboarded {
         let output = viewModel.transform(input: input)
         
         output.loginSignal
-            .subscribe(onNext: displayLoading,
+            .subscribe(onNext: disableUI,
                        onError: errorCatched,
                        onCompleted: loginCompleted)
             .disposed(by: bag)
-    }
-    
-    private func displayLoading(process: Bool) {
-        disableUI()
     }
     
     private func manageKeyboardEvents() {
