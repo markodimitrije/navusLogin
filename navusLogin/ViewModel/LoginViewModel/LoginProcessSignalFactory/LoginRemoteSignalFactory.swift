@@ -10,8 +10,8 @@ import RxSwift
 
 class LoginRemoteSignalFactory {
     
-    private let loginRemoteApi: ILoginRemoteApi
-    init(loginRemoteApi: ILoginRemoteApi) {
+    private let loginRemoteApi: ILoginWorker
+    init(loginRemoteApi: ILoginWorker) {
         self.loginRemoteApi = loginRemoteApi
     }
     

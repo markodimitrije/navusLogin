@@ -21,7 +21,7 @@ class LoginViewControllerFactory {
 class LoginViewModelFactory {
     static func make() -> LoginViewModel {
         return LoginViewModel(validator: LoginValidatorFactory.make(),
-                              loginRemoteApi: LoginRemoteApiFactory.make())
+                              loginWorker: LoginWorkerFactory.make())
     }
 }
 

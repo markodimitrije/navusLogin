@@ -11,11 +11,11 @@ import RxSwift
 class LoginViewModel: ILoginViewModel {
     
     private let validator: ILoginValidator
-    private let loginRemoteApi: ILoginRemoteApi
+    private let loginWorker: ILoginWorker
     
-    init(validator: ILoginValidator, loginRemoteApi: ILoginRemoteApi) {
+    init(validator: ILoginValidator, loginWorker: ILoginWorker) {
         self.validator = validator
-        self.loginRemoteApi = loginRemoteApi
+        self.loginWorker = loginWorker
     }
     
     func transform(input: Input) -> Output {
@@ -23,13 +23,20 @@ class LoginViewModel: ILoginViewModel {
         let validationSignalFactory = LoginValidationSignalFactory(validator: self.validator)
         let validatedInput = validationSignalFactory.filterInput(userInput: input.userCredentials)
         
-        let remoteSignalFactory = LoginRemoteSignalFactory(loginRemoteApi: self.loginRemoteApi)
+        let remoteSignalFactory = LoginRemoteSignalFactory(loginRemoteApi: self.loginWorker)
 
         let loginRemoteSignal = remoteSignalFactory.createWith(sig: validatedInput)
                                                     .subscribeOn(MainScheduler.instance)
         return Output(loginSignal: loginRemoteSignal)
     }
     
+}
+
+class LoginWorkerFactory {
+    static func make() -> ILoginWorker {
+        LoginWorker(loginRemoteApi: LoginRemoteApiFactory.make(),
+                    userState: UserStateRepository())
+    }
 }
 
 class LoginRemoteApiFactory {
