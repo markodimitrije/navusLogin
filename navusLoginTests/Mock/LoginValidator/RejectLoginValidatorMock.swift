@@ -9,8 +9,23 @@
 import Foundation
 @testable import navusLogin
 
+//class RejectLoginValidatorMock: ILoginValidator {
+//    func validate(userInput: ILoginCredentials) -> ValidationEnum {
+//        return .invalid(LoginValidationError.fieldIsEmpty)
+//    }
+//}
+
 class RejectLoginValidatorMock: ILoginValidator {
     func validate(userInput: ILoginCredentials) -> ValidationEnum {
+        do {
+            _ = try invalidate()
+        } catch {
+            return .invalid(LoginValidationError.fieldIsEmpty)
+        }
         return .invalid(LoginValidationError.fieldIsEmpty)
+    }
+    
+    private func invalidate() throws -> ValidationEnum {
+        throw LoginValidationError.fieldIsEmpty
     }
 }

@@ -18,8 +18,10 @@ class LoginValidationSignalFactory {
     func filterInput(userInput: Observable<ILoginCredentials>) -> Observable<ILoginCredentials> {
         return userInput.filter { (credentials) -> Bool in
             switch self.validator.validate(userInput: credentials) {
-                case .valid: return true
-                case .invalid(let error): throw error
+                case .valid:
+                    return true
+                case .invalid(let error):
+                    throw error
             }
         }
     }

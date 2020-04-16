@@ -23,16 +23,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AAE85FEB-143A-41AD-98C7-A6D053DD25CD"
+            uuid = "7E0ABAF8-93C1-4A43-9594-1103EE6C3DB5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "navusLoginTests/Mock/LoginValidator/RejectLoginValidatorMock.swift"
+            filePath = "navusLogin/ViewModel/LoginViewModel/LoginProcessSignalFactory/LoginValidationSignalFactory.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "validate(userInput:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "filterInput(userInput:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7E0ABAF8-93C1-4A43-9594-1103EE6C3DB5 - 6b22a166eaddf63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (navusLogin.ILoginCredentials) throws -&gt; Swift.Bool in navusLogin.LoginValidationSignalFactory.filterInput(userInput: RxSwift.Observable&lt;navusLogin.ILoginCredentials&gt;) -&gt; RxSwift.Observable&lt;navusLogin.ILoginCredentials&gt;"
+                  moduleName = "navusLogin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markodimitrijevic/development/smallAps/navusLogin/navusLogin/ViewModel/LoginViewModel/LoginProcessSignalFactory/LoginValidationSignalFactory.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "292">
+               </Location>
+               <Location
+                  uuid = "7E0ABAF8-93C1-4A43-9594-1103EE6C3DB5 - 6b22a166eaddf63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (navusLogin.ILoginCredentials) throws -&gt; Swift.Bool in navusLogin.LoginValidationSignalFactory.filterInput(userInput: RxSwift.Observable&lt;navusLogin.ILoginCredentials&gt;) -&gt; RxSwift.Observable&lt;navusLogin.ILoginCredentials&gt;"
+                  moduleName = "navusLogin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markodimitrijevic/development/smallAps/navusLogin/navusLogin/ViewModel/LoginViewModel/LoginProcessSignalFactory/LoginValidationSignalFactory.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "342">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "60309C34-DF9C-4B30-A9D3-EEDF9CCC770E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "navusLogin/ViewModel/LoginViewModel/LoginProcessSignalFactory/LoginValidationSignalFactory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "filterInput(userInput:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
