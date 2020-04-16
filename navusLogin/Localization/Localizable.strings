@@ -11,8 +11,11 @@
 "noConnection.title" = "No connetion";
 "noConnection.text" = "Can't connect to internet. Check your connection";
 
-"unknownUser.title" = "Authentication error";
-"unknownUser.text" = "Unknown user. Check your email and password";
+"unauthorized.title" = "Authentication error";
+"unauthorized.text" = "Unknown user. Check your email and password";
+
+"badParsing.title" = "Decoding Error";
+"badParsing.text" = "This app can't read response. Please contact support at: https://navus.io";
 
 "emailNotValid.title" = "Validation error";
 "emailNotValid.text" = "Email not valid. Type in correct email";

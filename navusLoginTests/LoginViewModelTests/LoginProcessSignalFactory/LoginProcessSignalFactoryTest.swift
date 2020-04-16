@@ -22,7 +22,7 @@ class LoginProcessSignalFactoryTest: XCTestCase {
         let acceptValidator = AcceptLoginValidatorMock()
         let sut = LoginValidationSignalFactory(validator: acceptValidator)
         //act
-        let signal = sut.map(userInput: userInputMock)
+        let signal = sut.filterInput(userInput: userInputMock)
         //assert
         do {
             let _ = try signal.toBlocking().toArray()
@@ -38,7 +38,7 @@ class LoginProcessSignalFactoryTest: XCTestCase {
         let sut = LoginValidationSignalFactory(validator: rejectValidator)
         //act+assert
         do {
-            let signal = sut.map(userInput: userInputMock)
+            let signal = sut.filterInput(userInput: userInputMock)
             let _ = try signal.toBlocking().first()!
         } catch is LoginValidationError {
             XCTAssertTrue(true)

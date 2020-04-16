@@ -10,7 +10,10 @@ import Foundation
 
 enum LoginError: Error {
     case noConnection
-    case unknownUser
+    case unauthorized
+    case httpError
+    case unprocessableEntity
+    case badParsing
 }
 
 extension LoginError: MyError {

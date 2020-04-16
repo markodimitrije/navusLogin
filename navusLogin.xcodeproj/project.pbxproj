@@ -65,6 +65,7 @@
 		7C66B4282446F49200E2C96A /* UserStateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C66B4272446F49200E2C96A /* UserStateRepository.swift */; };
 		7C66B42A2446F49A00E2C96A /* IUserStateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C66B4292446F49A00E2C96A /* IUserStateRepository.swift */; };
 		7C66B42D2446F67F00E2C96A /* UserStateRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C66B42C2446F67F00E2C96A /* UserStateRepositoryTest.swift */; };
+		7C7DAAEF24483C690072CDAE /* MocksTemporary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DAAEE24483C690072CDAE /* MocksTemporary.swift */; };
 		7C7DC67B2440DF3700479A95 /* LoginValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC67A2440DF3700479A95 /* LoginValidator.swift */; };
 		7C7DC67F2440DF7C00479A95 /* AcceptLoginValidatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC67E2440DF7C00479A95 /* AcceptLoginValidatorMock.swift */; };
 		7C7DC6812440DFAB00479A95 /* RejectLoginValidatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC6802440DFAB00479A95 /* RejectLoginValidatorMock.swift */; };
@@ -160,6 +161,7 @@
 		7C66B4272446F49200E2C96A /* UserStateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateRepository.swift; sourceTree = "<group>"; };
 		7C66B4292446F49A00E2C96A /* IUserStateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserStateRepository.swift; sourceTree = "<group>"; };
 		7C66B42C2446F67F00E2C96A /* UserStateRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateRepositoryTest.swift; sourceTree = "<group>"; };
+		7C7DAAEE24483C690072CDAE /* MocksTemporary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocksTemporary.swift; sourceTree = "<group>"; };
 		7C7DC67A2440DF3700479A95 /* LoginValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidator.swift; sourceTree = "<group>"; };
 		7C7DC67E2440DF7C00479A95 /* AcceptLoginValidatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptLoginValidatorMock.swift; sourceTree = "<group>"; };
 		7C7DC6802440DFAB00479A95 /* RejectLoginValidatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectLoginValidatorMock.swift; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 		7C5CA9182440A6C600C4EF3F /* navusLogin */ = {
 			isa = PBXGroup;
 			children = (
+				7C7DAAED24483C4B0072CDAE /* Mocks */,
 				7C66B4262446F47900E2C96A /* Repository */,
 				7C266F3D2445FAF2009174C8 /* Keyboard */,
 				7C266F362445CE9A009174C8 /* AlertErrorPresenter */,
@@ -447,7 +450,6 @@
 				7C5B3C982444A9140078111E /* Extension */,
 				7C2A91522442102A00991AC7 /* Network */,
 				7C7DC6852440E03100479A95 /* Model */,
-				7C5CA9492440A74100C4EF3F /* AppDel,assets,launch... */,
 				7C5CA94B2440AA8600C4EF3F /* ViewController */,
 				7C5CA9532440B30E00C4EF3F /* ViewModel */,
 				7C5CA94E2440AAF400C4EF3F /* Utilities */,
@@ -480,13 +482,6 @@
 				7C5CA93D2440A6CA00C4EF3F /* Info.plist */,
 			);
 			path = navusLoginUITests;
-			sourceTree = "<group>";
-		};
-		7C5CA9492440A74100C4EF3F /* AppDel,assets,launch... */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "AppDel,assets,launch...";
 			sourceTree = "<group>";
 		};
 		7C5CA94A2440A9CD00C4EF3F /* LoginViewModelTests */ = {
@@ -578,6 +573,14 @@
 				7C66B42C2446F67F00E2C96A /* UserStateRepositoryTest.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		7C7DAAED24483C4B0072CDAE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7C7DAAEE24483C690072CDAE /* MocksTemporary.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		7C7DC6792440DEFD00479A95 /* LoginValidation */ = {
@@ -943,6 +946,7 @@
 				7C5B3CAB2444B52A0078111E /* AlertInfo.swift in Sources */,
 				7C7DC6882440E04300479A95 /* ILoginCredentials.swift in Sources */,
 				7C266F3A2445CEC8009174C8 /* AlertErrorPresenter.swift in Sources */,
+				7C7DAAEF24483C690072CDAE /* MocksTemporary.swift in Sources */,
 				7C5CA9552440B46400C4EF3F /* ILoginViewModel.swift in Sources */,
 				7C5CA94D2440AAA400C4EF3F /* LoginViewControllerFactory.swift in Sources */,
 				7C5B3C9A2444A9260078111E /* UIViewController+Extension.swift in Sources */,
@@ -1084,7 +1088,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1138,7 +1142,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

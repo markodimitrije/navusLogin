@@ -13,7 +13,8 @@ class ErrorAlertInfoDictionaryFactory {
         var dict = [String: Any]()
         // LoginError pairs
         dict += noConnectionPair()
-        dict += unknownUserPair()
+        dict += unathorizedPair()
+        dict += badParsingPair()
         // LoginValidationError pairs
         dict += emailNotValidPair()
         dict += passNotValidPair()
@@ -27,10 +28,16 @@ class ErrorAlertInfoDictionaryFactory {
         return [LoginError.noConnection.getHash(): alertInfo]
     }
     
-    static private func unknownUserPair() -> [String: Any] {
-        let alertInfo = getAlertInfo(titleKeyString: "unknownUser.title",
-                                     textKeyString: "unknownUser.text")
-        return [LoginError.unknownUser.getHash(): alertInfo]
+    static private func unathorizedPair() -> [String: Any] {
+        let alertInfo = getAlertInfo(titleKeyString: "unauthorized.title",
+                                     textKeyString: "unauthorized.text")
+        return [LoginError.unauthorized.getHash(): alertInfo]
+    }
+    
+    static private func badParsingPair() -> [String: Any] {
+        let alertInfo = getAlertInfo(titleKeyString: "badParsing.title",
+                                     textKeyString: "badParsing.text")
+        return [LoginError.badParsing.getHash(): alertInfo]
     }
     
     static private func emailNotValidPair() -> [String: Any] {

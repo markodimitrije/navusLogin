@@ -10,7 +10,7 @@ import Foundation
 
 class AlertInfoFactory {
     static func make(error: Error) -> AlertInfo {
-        let infoDict = ErrorAlertInfoDictionaryFactory.make()
-        return infoDict[error.localizedDescription] as? AlertInfo ?? AlertInfo()
+        let infoDict = ErrorAlertInfoDictionaryFactory.make() as! [String: AlertInfo]
+        return infoDict[error.localizedDescription] ?? AlertInfo(title: "Error", text: error.localizedDescription, btnText: [])
     }
 }

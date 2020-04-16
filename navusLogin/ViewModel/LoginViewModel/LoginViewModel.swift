@@ -21,12 +21,12 @@ class LoginViewModel: ILoginViewModel {
     func transform(input: Input) -> Output {
         
         let validationSignalFactory = LoginValidationSignalFactory(validator: self.validator)
-        let validatedInputSignal = validationSignalFactory.filterInput(userInput: input.userCredentials)
+        let validatedInput = validationSignalFactory.filterInput(userInput: input.userCredentials)
         
         let remoteSignalFactory = LoginRemoteSignalFactory(loginRemoteApi: self.loginRemoteApi)
 
-        let loginRemoteSignal = remoteSignalFactory.createWith(sig: validatedInputSignal)//input.userCredentials)
-        
+        let loginRemoteSignal = remoteSignalFactory.createWith(sig: validatedInput)
+                                                    .subscribeOn(MainScheduler.instance)
         return Output(loginSignal: loginRemoteSignal)
     }
     
@@ -34,6 +34,6 @@ class LoginViewModel: ILoginViewModel {
 
 class LoginRemoteApiFactory {
     static func make() -> ILoginRemoteApi {
-        LoginRemoteApi(apiController: true) // TODO: marko
+        LoginRemoteApi(apiController: LeadLinkLoginRemoteAPI()) // TODO: marko
     }
 }
