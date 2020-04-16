@@ -10,10 +10,13 @@ import RxSwift
 @testable import navusLogin
 
 class LoginRemoteApiSuccessMock: ILoginRemoteApi {
+//    func loginWith(sig: Observable<ILoginCredentials>) -> Observable<IRemoteUserSession> {
+//        Observable.create { (observer) -> Disposable in
+//            observer.onNext(RemoteUserSessionMock())
+//            return Disposables.create()
+//        }
+//    }
     func loginWith(sig: Observable<ILoginCredentials>) -> Observable<IRemoteUserSession> {
-        return Observable.create { (observer) -> Disposable in
-            observer.onNext(RemoteUserSessionMock())
-            return Disposables.create()
-        }.subscribeOn(MainScheduler.instance)
+        return sig.map {_ in RemoteUserSessionMock()}
     }
 }

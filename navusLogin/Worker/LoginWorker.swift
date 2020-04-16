@@ -9,8 +9,8 @@
 import RxSwift
 
 extension LoginWorker: ILoginWorker {
-    func loginWith(sig: Observable<ILoginCredentials>) -> Observable<IRemoteUserSession> {
-        return loginRemoteApi.loginWith(sig: sig)
+    func loginWith(input: Observable<ILoginCredentials>) -> Observable<IRemoteUserSession> {
+        return loginRemoteApi.loginWith(sig: input)
     }
     func received(userSession: IRemoteUserSession) {
         userState.login(user: userSession)

@@ -9,7 +9,7 @@
 import RxSwift
 
 protocol ILoginWorker {
-    func loginWith(sig: Observable<ILoginCredentials>) -> Observable<IRemoteUserSession>
+    func loginWith(input: Observable<ILoginCredentials>) -> Observable<IRemoteUserSession>
     func received(userSession: IRemoteUserSession)
 }
 

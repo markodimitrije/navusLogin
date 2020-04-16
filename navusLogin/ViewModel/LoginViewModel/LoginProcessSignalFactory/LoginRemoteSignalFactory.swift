@@ -16,7 +16,7 @@ class LoginRemoteSignalFactory {
     }
     
     func createWith(sig: Observable<ILoginCredentials>) -> Observable<Void> {
-        return loginWorker.loginWith(sig: sig).do(onNext: { (session) in
+        return loginWorker.loginWith(input: sig).do(onNext: { (session) in
             self.loginWorker.received(userSession: session)
         }).map({_ in return ()})
     }

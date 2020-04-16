@@ -13,41 +13,35 @@ import RxSwift
 class LoginRemoteSignalFactoryTest: XCTestCase {
     
     func testLoginRemoteSignalFactory_ShouldEmitCompleted_ForSuccessfullLogin() {
-        
-        XCTAssert(false)
-        
+        let loginWorker = LoginWorkerSuccess()
         //arrange
-//        let mockSuccessApi = LoginRemoteApiSuccessMock()
-//        let credentials = Observable.just(ValidUserInputMock() as ILoginCredentials)
-//        let sut = LoginRemoteSignalFactory(loginRemoteApi: mockSuccessApi)
-//        //act
-//        let signal = sut.createWith(sig: credentials)
-//        //assert
-//        do {
-//            let _ = try signal.toBlocking().toArray() // onCompleted
-//            XCTAssertTrue(true)
-//        } catch {
-//            XCTAssertTrue(false)
-//        }
-        
+        let credentials = Observable.just(ValidUserInputMock() as ILoginCredentials)
+        let sut = LoginRemoteSignalFactory(loginWorker: loginWorker)
+        //act
+        let signal = sut.createWith(sig: credentials)
+        //assert
+        do {
+            let _ = try signal.toBlocking().toArray() // onCompleted
+            XCTAssertTrue(true)
+        } catch {
+            XCTAssertTrue(false)
+        }
+        XCTAssertTrue(loginWorker.sessionIsReceived)
     }
     
     func testLoginRemoteSignalFactory_ShouldEmitError_ForErrorLogin() {
-        
-        XCTAssert(false)
+        let loginWorker = LoginWorkerError()
         //arrange
-//        let mockErrorApi = LoginRemoteApiErrorMock()
-//        let credentials = Observable.just(EmptyUserInputMock() as ILoginCredentials)
-//        let sut = LoginRemoteSignalFactory(loginRemoteApi: mockErrorApi)
-//        //act
-//        let signal = sut.createWith(sig: credentials)
-//        //assert
-//        do {
-//            let _ = try signal.toBlocking().first()
-//        } catch {
-//            XCTAssertTrue(error is LoginError)
-//        }
-        
+        let credentials = Observable.just(EmptyUserInputMock() as ILoginCredentials)
+        let sut = LoginRemoteSignalFactory(loginWorker: loginWorker)
+        //act
+        let signal = sut.createWith(sig: credentials)
+        //assert
+        do {
+            let _ = try signal.toBlocking().first()
+        } catch {
+            XCTAssertTrue(error is LoginError)
+        }
+        XCTAssertFalse(loginWorker.sessionIsReceived)
     }
 }
-

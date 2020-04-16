@@ -15,12 +15,11 @@ class LoginWorkerTest: XCTestCase {
     let input: Observable<ILoginCredentials> = Observable.just(ValidUserInputMock())
     
     func testLoginWorker_ShouldSaveDataFor_SuccessfullLogin() {
-        XCTAssert(false)
+        XCTAssertTrue(false)
 //        let userStateRepo = UserStateMock()
-//        let sut = LoginWorker(loginRemoteApi: LoginRemoteApiSuccessMock(),
-//                              userState: userStateRepo)
+//        let sut = LoginWorker(loginRemoteApi: LoginRemoteApiSuccessMock(), userState: userStateRepo)
 //        //act
-//        let _ = sut.loginWith(sig: input)
+//        let _ = sut.loginWith(input: input)
 //        //assert
 //        XCTAssertTrue(userStateRepo.logInUserWasCalled)
     }

@@ -68,6 +68,10 @@
 		7C7DAAF224487E690072CDAE /* ILoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DAAF124487E690072CDAE /* ILoginWorker.swift */; };
 		7C7DAAF424487E930072CDAE /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DAAF324487E930072CDAE /* LoginWorker.swift */; };
 		7C7DAAF72448822B0072CDAE /* LoginWorkerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DAAF62448822B0072CDAE /* LoginWorkerTest.swift */; };
+		7C7DAAFA24488BD10072CDAE /* LoginWorkerSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DAAF924488BD10072CDAE /* LoginWorkerSuccess.swift */; };
+		7C7DAAFC24488C0C0072CDAE /* LoginWorkerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DAAFB24488C0C0072CDAE /* LoginWorkerError.swift */; };
+		7C7DAAFF24488D100072CDAE /* RemoteLoginSuccessSignalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DAAFE24488D100072CDAE /* RemoteLoginSuccessSignalMock.swift */; };
+		7C7DAB0124488D940072CDAE /* RemoteLoginErrorSignalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DAB0024488D930072CDAE /* RemoteLoginErrorSignalMock.swift */; };
 		7C7DC67B2440DF3700479A95 /* LoginValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC67A2440DF3700479A95 /* LoginValidator.swift */; };
 		7C7DC67F2440DF7C00479A95 /* AcceptLoginValidatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC67E2440DF7C00479A95 /* AcceptLoginValidatorMock.swift */; };
 		7C7DC6812440DFAB00479A95 /* RejectLoginValidatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7DC6802440DFAB00479A95 /* RejectLoginValidatorMock.swift */; };
@@ -166,6 +170,10 @@
 		7C7DAAF124487E690072CDAE /* ILoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoginWorker.swift; sourceTree = "<group>"; };
 		7C7DAAF324487E930072CDAE /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
 		7C7DAAF62448822B0072CDAE /* LoginWorkerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorkerTest.swift; sourceTree = "<group>"; };
+		7C7DAAF924488BD10072CDAE /* LoginWorkerSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorkerSuccess.swift; sourceTree = "<group>"; };
+		7C7DAAFB24488C0C0072CDAE /* LoginWorkerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorkerError.swift; sourceTree = "<group>"; };
+		7C7DAAFE24488D100072CDAE /* RemoteLoginSuccessSignalMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLoginSuccessSignalMock.swift; sourceTree = "<group>"; };
+		7C7DAB0024488D930072CDAE /* RemoteLoginErrorSignalMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLoginErrorSignalMock.swift; sourceTree = "<group>"; };
 		7C7DC67A2440DF3700479A95 /* LoginValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidator.swift; sourceTree = "<group>"; };
 		7C7DC67E2440DF7C00479A95 /* AcceptLoginValidatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptLoginValidatorMock.swift; sourceTree = "<group>"; };
 		7C7DC6802440DFAB00479A95 /* RejectLoginValidatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectLoginValidatorMock.swift; sourceTree = "<group>"; };
@@ -605,6 +613,24 @@
 			path = Worker;
 			sourceTree = "<group>";
 		};
+		7C7DAAF824488BC60072CDAE /* LoginWorker */ = {
+			isa = PBXGroup;
+			children = (
+				7C7DAAF924488BD10072CDAE /* LoginWorkerSuccess.swift */,
+				7C7DAAFB24488C0C0072CDAE /* LoginWorkerError.swift */,
+			);
+			path = LoginWorker;
+			sourceTree = "<group>";
+		};
+		7C7DAAFD24488CE90072CDAE /* RemoteUserSessionSuccessSignal */ = {
+			isa = PBXGroup;
+			children = (
+				7C7DAAFE24488D100072CDAE /* RemoteLoginSuccessSignalMock.swift */,
+				7C7DAB0024488D930072CDAE /* RemoteLoginErrorSignalMock.swift */,
+			);
+			path = RemoteUserSessionSuccessSignal;
+			sourceTree = "<group>";
+		};
 		7C7DC6792440DEFD00479A95 /* LoginValidation */ = {
 			isa = PBXGroup;
 			children = (
@@ -618,6 +644,8 @@
 		7C7DC67C2440DF6600479A95 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				7C7DAAFD24488CE90072CDAE /* RemoteUserSessionSuccessSignal */,
+				7C7DAAF824488BC60072CDAE /* LoginWorker */,
 				7C411A4824421453009EC1D5 /* RemoteLoginApi */,
 				7C2A914F24420FCA00991AC7 /* RemoteUserSession */,
 				7C539F2B2441D9D90096DF3F /* UserInput */,
@@ -1001,8 +1029,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C60C77E2441BA6E00F787D4 /* LoginProcessSignalFactoryTest.swift in Sources */,
+				7C7DAAFA24488BD10072CDAE /* LoginWorkerSuccess.swift in Sources */,
 				7C7DC6812440DFAB00479A95 /* RejectLoginValidatorMock.swift in Sources */,
 				7C5B3C9524448DA40078111E /* EmailFieldValidatorTest.swift in Sources */,
+				7C7DAAFC24488C0C0072CDAE /* LoginWorkerError.swift in Sources */,
 				7C7DAAF72448822B0072CDAE /* LoginWorkerTest.swift in Sources */,
 				7C7DC67F2440DF7C00479A95 /* AcceptLoginValidatorMock.swift in Sources */,
 				7C5B3C8D2444777A0078111E /* LoginValidationTest.swift in Sources */,
@@ -1010,11 +1040,13 @@
 				7C411A4E244215C7009EC1D5 /* LoginRemoteSignalFactoryTest.swift in Sources */,
 				7C411A4C24421470009EC1D5 /* LoginRemoteApiSuccessMock.swift in Sources */,
 				7C66B42D2446F67F00E2C96A /* UserStateRepositoryTest.swift in Sources */,
+				7C7DAB0124488D940072CDAE /* RemoteLoginErrorSignalMock.swift in Sources */,
 				7C411A4A24421462009EC1D5 /* LoginRemoteApiErrorMock.swift in Sources */,
 				7C5CA9312440A6CA00C4EF3F /* navusLoginTests.swift in Sources */,
 				7C5B3C90244478070078111E /* EmailValidatorMock.swift in Sources */,
 				7C5B3C9724448F710078111E /* PasswordFieldValidationTest.swift in Sources */,
 				7C5B3C92244478D30078111E /* PasswordValidatorMock.swift in Sources */,
+				7C7DAAFF24488D100072CDAE /* RemoteLoginSuccessSignalMock.swift in Sources */,
 				7C2A915124420FDB00991AC7 /* RemoteUserSessionMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
