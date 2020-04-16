@@ -17,6 +17,7 @@ class UserStateRepository {
 
 extension UserStateRepository: IUserStateRepository {
     func login(user: IRemoteUserSession) {
+        print("save userSession to repo")
         userDefaults.set(user.getCredentials().email, forKey: "email")
         userDefaults.set(user.getCredentials().password, forKey: "password")
         userDefaults.set(user.getToken(), forKey: "token")

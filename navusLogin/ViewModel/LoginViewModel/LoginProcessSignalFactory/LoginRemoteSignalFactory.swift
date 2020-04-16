@@ -10,14 +10,14 @@ import RxSwift
 
 class LoginRemoteSignalFactory {
     
-    private let loginRemoteApi: ILoginWorker
-    init(loginRemoteApi: ILoginWorker) {
-        self.loginRemoteApi = loginRemoteApi
+    private let loginWorker: ILoginWorker
+    init(loginWorker: ILoginWorker) {
+        self.loginWorker = loginWorker
     }
     
     func createWith(sig: Observable<ILoginCredentials>) -> Observable<Void> {
-        return loginRemoteApi.loginWith(sig: sig).do(onNext: { (session) in
-            print("persist this session = \(session)")
+        return loginWorker.loginWith(sig: sig).do(onNext: { (session) in
+            self.loginWorker.received(userSession: session)
         }).map({_ in return ()})
     }
     

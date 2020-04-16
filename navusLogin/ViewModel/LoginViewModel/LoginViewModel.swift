@@ -23,7 +23,7 @@ class LoginViewModel: ILoginViewModel {
         let validationSignalFactory = LoginValidationSignalFactory(validator: self.validator)
         let validatedInput = validationSignalFactory.filterInput(userInput: input.userCredentials)
         
-        let remoteSignalFactory = LoginRemoteSignalFactory(loginRemoteApi: self.loginWorker)
+        let remoteSignalFactory = LoginRemoteSignalFactory(loginWorker: self.loginWorker)
 
         let loginRemoteSignal = remoteSignalFactory.createWith(sig: validatedInput)
                                                     .subscribeOn(MainScheduler.instance)
