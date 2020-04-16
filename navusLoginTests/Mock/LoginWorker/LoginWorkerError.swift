@@ -12,7 +12,7 @@ class LoginWorkerError: ILoginWorker {
     
     var sessionIsReceived = false
     
-    func loginWith(sig: Observable<ILoginCredentials>) -> Observable<IRemoteUserSession> {
+    func loginWith(input sig: Observable<ILoginCredentials>) -> Observable<IRemoteUserSession> {
         sig.flatMap { (_) -> Observable<IRemoteUserSession> in
             return Observable.create { (observer) -> Disposable in
                 observer.onError(LoginError.unauthorized)
