@@ -12,7 +12,7 @@ import RxSwift
 class LoginRemoteApiErrorMock: ILoginRemoteApi {
     func loginWith(sig: Observable<ILoginCredentials>) -> Observable<IRemoteUserSession> {
         Observable.create { (observer) -> Disposable in
-            observer.onError(LoginError.unknownUser)
+            observer.onError(LoginError.unauthorized)
             return Disposables.create()
         }
     }

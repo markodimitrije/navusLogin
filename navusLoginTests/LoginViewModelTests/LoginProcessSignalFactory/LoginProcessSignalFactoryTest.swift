@@ -15,7 +15,7 @@ import RxBlocking
 
 class LoginProcessSignalFactoryTest: XCTestCase {
     
-    let userInputMock = EmptyUserInputMock()
+    let userInputMock: Observable<ILoginCredentials> = Observable.just(EmptyUserInputMock())
     
     func testLoginValidationSignal_ShouldEmit_OnNextFor_AcceptValidator() {
         //arrange
