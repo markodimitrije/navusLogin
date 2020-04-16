@@ -15,17 +15,14 @@ class LoginValidationSignalFactory {
         self.validator = validator
     }
     
-    func map(userInput: ILoginCredentials) -> Observable<Void> {
-        return Observable.create { (observer) -> Disposable in
-            switch self.validator.validate(userInput: userInput) {
-                case .valid:
-                    observer.onNext(())
-                    observer.onCompleted()
-                case .invalid(let error):
-                    observer.onError(error)
+    func filterInput(userInput: Observable<ILoginCredentials>) -> Observable<ILoginCredentials> {
+        return userInput.filter { (credentials) -> Bool in
+            switch self.validator.validate(userInput: credentials) {
+                case .valid: return true
+                case .invalid(let error): throw error
             }
-            return Disposables.create()
-        }.subscribeOn(MainScheduler.instance)
+        }
     }
     
 }
+

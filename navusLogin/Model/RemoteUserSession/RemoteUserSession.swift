@@ -16,10 +16,10 @@ extension RemoteUserSession: IRemoteUserSession {
 struct RemoteUserSession {
     
     // MARK: - Properties
-    private let credentials: LoginCredentials
+    private let credentials: ILoginCredentials
     private let token: String
     
-    init(credentials: LoginCredentials, token: String) {
+    init(credentials: ILoginCredentials, token: String) {
         self.credentials = credentials
         self.token = token
     }

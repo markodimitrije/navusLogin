@@ -16,7 +16,9 @@ class LoginRemoteSignalFactory {
     }
     
     func createWith(sig: Observable<ILoginCredentials>) -> Observable<Void> {
-        return loginRemoteApi.loginWith(sig: sig).map({_ in return ()})
+        return loginRemoteApi.loginWith(sig: sig).do(onNext: { (session) in
+            print("persist this session = \(session)")
+        }).map({_ in return ()})
     }
     
 }

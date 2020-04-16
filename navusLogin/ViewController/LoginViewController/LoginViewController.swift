@@ -45,6 +45,10 @@ class LoginViewController: UIViewController, Storyboarded {
         
         let output = viewModel.transform(input: input)
         
+        input.userCredentials.map({_ in return ()})
+            .subscribe(onNext: disableUI)
+            .disposed(by: bag)
+        
         output.loginSignal
             .subscribe(onNext: disableUI,
                        onError: errorCatched,
@@ -63,6 +67,7 @@ class LoginViewController: UIViewController, Storyboarded {
     }
     
     private func disableUI() {
+        print("disableUI() is called...")
         _ = [emailTxtField, passTxtField, logBtn].map {$0.isEnabled = false}
             logBtn.setTitle("", for: .normal)
             activeIndicator.startAnimating()

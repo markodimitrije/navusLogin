@@ -14,19 +14,14 @@ class LoginRemoteApi: ILoginRemoteApi {
         self.apiController = apiController
     }
     
-    func login(loginCredentials: ILoginCredentials) -> Observable<IRemoteUserSession> {
-        let remoteMock = RemoteUserSession(credentials: LoginCredentials(email: "",
-                                                                         password: ""),
-                                           token: "token")
-        return Observable.just(remoteMock).delay(RxTimeInterval.seconds(2), scheduler: MainScheduler.instance) //TODO marko
-    }
-    
     func loginWith(sig: Observable<ILoginCredentials>) -> Observable<IRemoteUserSession> {
-        let transSig = sig.map { (credentials) -> IRemoteUserSession in
-            return RemoteUserSession(credentials: LoginCredentials(email: "", password: ""),
-                                     token: "token")
-        }
-        //return Observable.just(remoteMock).delay(RxTimeInterval.seconds(2), scheduler: MainScheduler.instance) //TODO marko
+        let transSig = sig.map(RemoteUserSessionFactory.make)
         return transSig.delay(2.0, scheduler: MainScheduler.instance)
+    }
+}
+
+class RemoteUserSessionFactory {
+    static func make(credentials: ILoginCredentials) -> IRemoteUserSession {
+        return RemoteUserSession(credentials: credentials, token: "new_token")
     }
 }
